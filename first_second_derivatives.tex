@@ -26,9 +26,13 @@ The first and second derivatives of the sigmoid function in forms depending only
 And for future convenience: 
 \begin{align}
 \pdv{\Out i m}{\Input i m} &= 
-\pdv{}{\Input i m}\left({\Out i m} = \sigma(\Input i m)\right) = \left(\Out i m\right)\left(1 - \Out i m\right)
+\pdv{}{\Input i m}\left({\Out i m} = \sigma(\Input i m)\right) \\
+&= \left(\Out i m\right)\left(1 - \Out i m\right)
 \\
-\pdv[2]{{\Out i m}}{{\Input i m}}
+\pdv[2]{{\Out i m}}{{\Input i m}} &=
+\pdv{}{{\Input i m}}\left(\pdv{\Out i m}{\Input i m} = \left(\Out i m\right)\left(1 - \Out i m\right)\right)
+\\
+&= \left(\Out i m\left(1 - \Out i m\right)\right)\left(1 - 2\Out i m\right)
 \end{align}
 \\[5pt]Derivative of the error with respect to the $i$th neuron's input $\Input i 0$ in the output layer:
 \begin{align}
