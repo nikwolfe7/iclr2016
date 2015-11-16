@@ -172,7 +172,14 @@ _{\text{from} \ (\ref{dedx})}
 \end{align}
 The second derivative of the error with respect to a neuron with output $\Out j 1$ in the first hidden layer:
 \begin{align}
-stuff
+\pdv[2]{E}{{\Out j 1}} &= 
+\pdv{}{\Out j 1}\left(
+\pdv{E}{\Out j 1}
+\right)
+\\
+&= \pdv{}{\Out j 1}\left(
+\pdv{E}{\Input i 0}\Weight j i 0
+\right)
 \end{align}
 %
 %\begin{align}
