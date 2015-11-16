@@ -47,7 +47,7 @@ And for future convenience:
 \\
 &= \left(\Out i 0 - \Target i\right)\left(\Out i 0 \left(1 - \Out i 0\right)\right)
 \\
-&= \left(\Out i 0 - \Target i\right)\sigma\prime\left(\Input i 0\right)
+&= \left(\Out i 0 - \Target i\right)\sigma\prime\left(\Input i 0\right)\label{dedx}
 \end{align}
 \\[5pt]Second derivative of the error with respect to the $i$th neuron's input $\Input i 0$ in the output layer:
 \begin{align}
@@ -77,7 +77,10 @@ And for future convenience:
 \\
 \pdv{E}{\Con j i 0}&= \left(\Out i 0 - \Target i \right) \left(\Out i 0 \left(1 - \Out i 0\right) \right)
 \\
-&= \left(\Out i 0 - \Target i \right) \sigma\prime\left(\Input i 0\right)\label{dedc}
+&= \underbrace{\left(\Out i 0 - \Target i \right) \sigma\prime\left(\Input i 0\right)\label{dedc}}
+_{\text{from} \ (\ref{dedx})} 
+\\
+\pdv{E}{\Con j i 0} &= \pdv{E}{\Input i 0}
 \end{align}
 Second derivative of the error with respect to a single input contribution $\Con j i 0$:
 \begin{align}
