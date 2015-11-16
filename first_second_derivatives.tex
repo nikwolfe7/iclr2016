@@ -43,7 +43,8 @@ And for future convenience:
 \begin{align}
 \pdv{E}{\Input i 0} &= \pdv{E}{\Out i 0} \pdv{\Out i 0}{\Input i 0} 
 \\
-&= \underbrace{\left(\Out i 0 - \Target i\right)}_{\text{from} \ (\ref{cost_func_derivative})} \underbrace{\left(\sigma\left(\Input i 0\right)\left(1 - \sigma\left(\Input i 0\right)\right)\right)}_{\text{from} \ (\ref{sigmoid_derivative})}
+&= \underbrace{\left(\Out i 0 - \Target i\right)}_{\text{from} \ (\ref{cost_func_derivative})} \underbrace{\sigma\left(\Input i 0\right)\left(1 - \sigma\left(\Input i 0\right)\right)}
+_{\text{from} \ (\ref{sigmoid_derivative})}
 \\
 &= \left(\Out i 0 - \Target i\right)\left(\Out i 0 \left(1 - \Out i 0\right)\right)
 \\
