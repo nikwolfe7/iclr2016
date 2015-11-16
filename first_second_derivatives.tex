@@ -146,7 +146,7 @@ _{\text{from} \ (\ref{d2edx2})}
 \begin{align}
 &\pdv{E}{\Input i 0} = \left(\Out i 0 - \Target i\right)\sigma^{\prime}\left(\Input i 0\right)
 & 
-\pdv[2]{E}{{\Input i 0}} = \sigma^{\prime}\left(\Input i 0\right)^2 + \left(\Out i 0 - \Target i\right)\sigma^{\prime\prime}\left(\Input i 0\right)
+\pdv[2]{E}{{\Input i 0}} = \left(\sigma^{\prime}\left(\Input i 0\right)\right)^2 + \left(\Out i 0 - \Target i\right)\sigma^{\prime\prime}\left(\Input i 0\right)
 \end{align}
 \begin{align}
 &\pdv{E}{{\Con j i 0}} = \pdv{E}{{\Input i 0}}
@@ -157,60 +157,52 @@ _{\text{from} \ (\ref{d2edx2})}
 The first derivative of the error with respect to a neuron with output $\Out j 1$ in the first hidden layer, summing over all partial derivative contributions from the output layer:
 \begin{align}
 \pdv{E}{\Out j 1} &= 
-\sum_i\left(
+\sum_i
 \pdv{E}{\Out i 0}
 \pdv{\Out i 0}{\Input i 0}
 \pdv{\Input i 0}{\Con j i 0}
 \pdv{\Con j i 0}{\Out j 1}
-\right)
 = 
-\sum_i\left(
+\sum_i
 \underbrace{\left(\Out i 0 - \Target i\right)\sigma^{\prime}\left(\Input i 0\right)}
 _{\text{from} \ (\ref{dedx})}
 \Weight j i 0
-\right)
 \\
-&\left(\pdv{{\Con j i m}}{{\Out j {m+1}}} = \pdv{}{{\Out j {m+1}}}\left(\Con j i m = \Weight j i m\Out j {m+1}\right) = \Weight j i m\right)\label{dcdo}
+&\pdv{{\Con j i m}}{{\Out j {m+1}}} = \pdv{}{{\Out j {m+1}}}\left(\Con j i m = \Weight j i m\Out j {m+1}\right) = \Weight j i m\label{dcdo}
 \\
-\pdv{E}{\Out j 1} &= \sum_i\left(\pdv{E}{\Input i 0}\Weight j i 0\right)
+\pdv{E}{\Out j 1} &= \sum_i\pdv{E}{\Input i 0}\Weight j i 0
 \end{align}
 The second derivative of the error with respect to a neuron with output $\Out j 1$ in the first hidden layer:
 \begin{align}
 \pdv[2]{E}{{\Out j 1}} &= 
-\pdv{}{\Out j 1}\left(
+\pdv{}{\Out j 1}
 \pdv{E}{\Out j 1}
-\right)
 \\
 &= \pdv{}{\Out j 1}
-\sum_i\left(\pdv{E}{\Input i 0}\Weight j i 0
-\right)
+\sum_i\pdv{E}{\Input i 0}\Weight j i 0
 \\
 &= \pdv{}{\Out j 1}
-\sum_i\left(
+\sum_i
 \left(\Out i 0 - \Target i\right)\sigma^{\prime}\left(\Input i 0\right)\Weight j i 0
-\right)
 \\
-&\left({\Out i 0} = \sigma\left({\Input i 0}\right) = \sigma\left(\sum_j\left({\Weight j i 0}{\Out j 1}\right)\right)\right)
+&{\Out i 0} = \sigma\left({\Input i 0}\right) = \sigma\left(\sum_j\left({\Weight j i 0}{\Out j 1}\right)\right)
 \\
 &= \pdv{}{\Out j 1}
-\sum_i\left(
+\sum_i
 \underbrace{\left(\sigma\left(\sum_j{\Weight j i 0}{\Out j 1}\right) - \Target i\right)}
 _{f\left(\Out j 1\right)}
 \underbrace{\sigma^{\prime}\left(\sum_j{\Weight j i 0}{\Out j 1}\right)\Weight j i 0}
 _{g\left(\Out j 1\right)}
-\right)
 \\
 &=\sum_i\left(f^{\prime}\left(\Out j 1\right)g\left(\Out j 1\right) + f\left(\Out j 1\right)g^{\prime}\left(\Out j 1\right)\right)
 \\
-&=\sum_i\left(
+&=\sum_i
 \sigma^{\prime}\left(\sum_j{\Weight j i 0}{\Out j 1}\right)\Weight j i 0 \
 \sigma^{\prime}\left(\sum_j{\Weight j i 0}{\Out j 1}\right)\Weight j i 0
-\right)
 + \ldots \\
-&\sum_i\left(
+&\sum_i
 \left(\sigma\left(\sum_j{\Weight j i 0}{\Out j 1}\right) - \Target i\right)
 \sigma^{\prime\prime}\left(\sum_j{\Weight j i 0}{\Out j 1}\right)\left(\Weight j i 0\right)^2
-\right)
 \\
 &=
 \sum_i\left(
@@ -221,17 +213,15 @@ _{g\left(\Out j 1\right)}
 \right)
 \\
 &=\sum_i
-\left(
 \underbrace{\left(\left(\sigma^{\prime}\left(\Input i 0\right)\right)^2
 + 
 \left(\Out i 0 - \Target i\right)
 \sigma^{\prime\prime}\left(\Input i 0\right)\right)}
 _{\text{from} \ (\ref{d2edx2})}
-\left({\Weight j i 0}\right)^2\right)
+\left({\Weight j i 0}\right)^2
 \\
-\pdv[2]{E}{{\Out j 1}} &= \sum_i\left(
+\pdv[2]{E}{{\Out j 1}} &= \sum_i
 \pdv[2]{E}{{\Input i 0}} \left({\Weight j i 0}\right)^2
-\right)
 \end{align}
 The first derivative of the error with respect to the input
 %
