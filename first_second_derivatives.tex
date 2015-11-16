@@ -180,6 +180,33 @@ The second derivative of the error with respect to a neuron with output $\Out j 
 &= \pdv{}{\Out j 1}\left(
 \pdv{E}{\Input i 0}\Weight j i 0
 \right)
+\\
+&= \pdv{}{\Out j 1}\left(
+\left(\Out i 0 - \Target i\right)\sigma\prime\left(\Input i 0\right)\Weight j i 0
+\right)
+\\
+&\left({\Out i 0} = \sigma\left({\Input i 0}\right) = \sigma\left(\sum_j\left({\Con j i 0} = {\Weight j i 0}{\Out j 1}\right)\right) = \sigma\left({\Weight j i 0}{\Out j 1} + k\right)\right)
+\\
+&= \pdv{}{\Out j 1}\left(
+\underbrace{\left(\sigma\left({\Weight j i 0}{\Out j 1} + k\right) - \Target i\right)}
+_{f\left(\Out j 1\right)}
+\underbrace{\sigma\prime\left({\Weight j i 0}{\Out j 1} + k\right)\Weight j i 0}
+_{g\left(\Out j 1\right)}
+\right)
+\\
+&=f\prime\left(\Out j 1\right)g\left(\Out j 1\right) + f\left(\Out j 1\right)g\prime\left(\Out j 1\right)
+\\
+&=\sigma\prime\left({\Weight j i 0}{\Out j 1} + k\right)
+\sigma\prime\left({\Weight j i 0}{\Out j 1} + k\right)\Weight j i 0
++ \ldots \\
+&\left(\sigma\left({\Weight j i 0}{\Out j 1} + k\right) - \Target i\right)
+\sigma\prime\prime\left({\Weight j i 0}{\Out j 1} + k\right)\left(\Weight j i 0\right)^2
+\\
+\pdv[2]{E}{{\Out j 1}}
+&=\sigma\prime\left(\Input i 0\right)^2\Weight j i 0
++ 
+\left(\Out i 0 - \Target i\right)
+\sigma\prime\prime\left(\Input i 0\right){\Weight j i 0}^2
 \end{align}
 %
 %\begin{align}
