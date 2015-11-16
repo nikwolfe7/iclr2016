@@ -14,7 +14,7 @@ The first and second derivatives of the cost function with respect to the output
 \pdv{E}{\Out i 0} &= \Out i 0 - \Target i \label{cost_func_derivative}
 \end{align}
 \begin{align}
-\pdv[2]{E}{(\Out i 0)} &= 1\label{cost_func_2nd_derivative}
+\pdv[2]{E}{{\Out i 0}} &= 1\label{cost_func_2nd_derivative}
 \end{align}
 \\[5pt]
 The first and second derivatives of the sigmoid function in forms depending only on the output:
@@ -22,6 +22,22 @@ The first and second derivatives of the sigmoid function in forms depending only
 \sigma\prime(x) &= \sigma(x)\left(1 - \sigma(x)\right)\label{sigmoid_derivative} 
 \\
 \sigma\prime\prime(x) &= \sigma\prime(x)\left(1 - 2\sigma(x)\right) \label{sigmoid_2nd_derivative}
+\end{align}
+The second derivative of the sigmoid is easily derived from the first derivative:
+\begin{align}
+\sigma\prime(x) &= \sigma(x)\left(1 - \sigma(x)\right)
+\\
+\sigma\prime\prime(x) &= \dv{}{x}
+\underbrace{\sigma(x)}_{f(x)}
+\underbrace{\left(1 - \sigma(x)\right)}_{g(x)}
+\\
+\sigma\prime\prime(x) &= f\prime(x)g(x) + f(x)g\prime(x)
+\\
+\sigma\prime\prime(x) &= \sigma\prime(x)(1-\sigma(x)) - \sigma(x)\sigma\prime(x)
+\\
+\sigma\prime\prime(x) &= \sigma\prime(x) - 2\sigma(x)\sigma\prime(x)
+\\
+\sigma\prime\prime(x) &= \sigma\prime(x)(1 - 2\sigma(x))
 \end{align}
 And for future convenience: 
 \begin{align}
@@ -121,21 +137,43 @@ _{\text{from} \ (\ref{d2edx2})}
 \\
 \pdv[2]{E}{{\Con j i 0}} &= \pdv[2]{E}{{\Input i 0}}
 \end{align}
-%& 
-
-%Term \ref{zeroterm} is just zero, of course. Then, plugging in...
-%
-%\begin{align}
-%\pdv[2]{E}{\Con j i 0} &= \pdv{}{\Con j i 0}\left(\Out i 0 - \Target i \right) \pdv{\Out i 0}{\Input i 0} + \left(\Out i 0 - \Target i \right) \pdv{}{\Con j i 0} \pdv{\Out i 0}{\Input i 0}\\
-%&= \left(\pdv{\Out i 0}{\Input j i 0}\right)^2 + \left(\Out i 0 - \Target i \right) \sigma''\left(\Input i 0\right)\\
-%&= \left(\sigma'\left(\Input i 0\right)\right)^2 + \left(\Out i 0 - \Target i \right) \sigma''\left(\Input i 0\right)
-%\end{align}
-%
-%Moving on to the next layer, we have:
-%\begin{align}
-%\pdv{E}{\Out j 1} &= \pdv{E}{\Out i 0}\pdv{\Out i 0}{\Input i 0}\pdv{\Input i 0}{\Con j i 0}\pdv{\Con j i 0}{\Out j 1}
-%= \left(\Out i 0 - \Target i\right)\sigma'(\Input i 0)\Weight j i 0
-%\end{align}
+\subsubsection{Summary Of Output Layer Derivatives}
+\begin{align}
+&\pdv{E}{\Out i 0} = \Out i 0 - \Target i 
+&
+\pdv[2]{E}{(\Out i 0)} = 1
+\end{align}
+\begin{align}
+&\pdv{E}{\Input i 0} = \left(\Out i 0 - \Target i\right)\sigma\prime\left(\Input i 0\right)
+& 
+\pdv[2]{E}{{\Input i 0}} = \sigma\prime\left(\Input i 0\right)^2 + \left(\Out i 0 - \Target i\right)\sigma\prime\prime\left(\Input i 0\right)
+\end{align}
+\begin{align}
+&\pdv{E}{{\Con j i 0}} = \pdv{E}{{\Input i 0}}
+&
+\pdv[2]{E}{{\Con j i 0}} = \pdv[2]{E}{{\Input i 0}}
+\end{align}
+\subsubsection{Hidden Layer Derivatives}
+The first derivative of the error with respect to a neuron with output $\Out j 1$ in the first hidden layer:
+\begin{align}
+\pdv{E}{\Out j 1} &= 
+\pdv{E}{\Out i 0}
+\pdv{\Out i 0}{\Input i 0}
+\pdv{\Input i 0}{\Con j i 0}
+\pdv{\Con j i 0}{\Out j 1}
+= 
+\underbrace{\left(\Out i 0 - \Target i\right)\sigma\prime\left(\Input i 0\right)}
+_{\text{from} \ (\ref{dedx})}
+\Weight j i 0
+\\
+&\left(\pdv{{\Con j i m}}{{\Out j {m+1}}} = \pdv{}{{\Out j {m+1}}}\left(\Con j i m = \Weight j i m\Out j {m+1}\right) = \Weight j i m\right)\label{dcdo}
+\\
+\pdv{E}{\Out j 1} &= \pdv{E}{\Input i 0}\Weight j i 0
+\end{align}
+The second derivative of the error with respect to a neuron with output $\Out j 1$ in the first hidden layer:
+\begin{align}
+stuff
+\end{align}
 %
 %\begin{align}
 %\pdv[2]{E}{\Out j 1} &= \pdv[2]{E}{\Out j 1}{\Out i 0}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.5)  15 NOV 2015 22:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.5)  16 NOV 2015 00:01
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1097,6 +1097,189 @@ With luck, this will get me unwedged. But if you
 really didn't forget anything, try typing `2' now; then
 my insertion and my current dilemma will both disappear.
 
+Missing character: There is no T in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no c in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no n in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no g in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no l in font nullfont!
+Missing character: There is no y in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no o in font nullfont!
+Missing character: There is no m in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no h in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no f in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no s in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no d in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no r in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no a in font nullfont!
+Missing character: There is no t in font nullfont!
+Missing character: There is no i in font nullfont!
+Missing character: There is no v in font nullfont!
+Missing character: There is no e in font nullfont!
+Missing character: There is no : in font nullfont!
+
+! LaTeX Error: Environment align undefined.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \begin{align}
+                  
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.28 \sigma
+           \prime(x) &= \sigma(x)\left(1 - \sigma(x)\right)
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Misplaced alignment tab character &.
+l.28 \sigma\prime(x) &
+                      = \sigma(x)\left(1 - \sigma(x)\right)
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.30 \sigma\prime\prime(x) &
+                            = \dv{}{x}
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.30 \sigma\prime\prime(x) &= \dv
+                                 {}{x}
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Misplaced alignment tab character &.
+l.34 \sigma\prime\prime(x) &
+                            = f\prime(x)g(x) + f(x)g\prime(x)
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.36 \sigma\prime\prime(x) &
+                            = \sigma\prime(x)(1-\sigma(x)) - \sigma(x)\sigma...
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.38 \sigma\prime\prime(x) &
+                            = \sigma\prime(x) - 2\sigma(x)\sigma\prime(x)
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+! Misplaced alignment tab character &.
+l.40 \sigma\prime\prime(x) &
+                            = \sigma\prime(x)(1 - 2\sigma(x))
+I can't figure out why you would want to use a tab mark
+here. If you just want an ampersand, the remedy is
+simple: Just type `I\&' now. But if some right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+
+! LaTeX Error: \begin{document} ended by \end{align}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.41 \end{align}
+                
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.41 \end{align}
+                
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
 Missing character: There is no A in font nullfont!
 Missing character: There is no n in font nullfont!
 Missing character: There is no d in font nullfont!
@@ -1128,14 +1311,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.27 \begin{align}
+l.43 \begin{align}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.28 \dv
+l.44 \dv
         {\Out i m}{\Input i m} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1144,7 +1327,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.28 \dv{\Out
+l.44 \dv{\Out
               i m}{\Input i m} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1155,7 +1338,7 @@ and I'll forget about whatever was undefined.
 Missing character: There is no i in font nullfont!
 Missing character: There is no m in font nullfont!
 ! Undefined control sequence.
-l.28 \dv{\Out i m}{\Input
+l.44 \dv{\Out i m}{\Input
                           i m} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1166,7 +1349,7 @@ and I'll forget about whatever was undefined.
 Missing character: There is no i in font nullfont!
 Missing character: There is no m in font nullfont!
 ! Misplaced alignment tab character &.
-l.28 \dv{\Out i m}{\Input i m} &
+l.44 \dv{\Out i m}{\Input i m} &
                                 =
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1177,7 +1360,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.29 \dv
+l.45 \dv
         {}{\Input i m}\left({\Out i m} = \sigma(\Input i m)\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1186,7 +1369,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.29 \dv{}{\Input
+l.45 \dv{}{\Input
                   i m}\left({\Out i m} = \sigma(\Input i m)\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1199,13 +1382,13 @@ Missing character: There is no m in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.29 \dv{}{\Input i m}\left
+l.45 \dv{}{\Input i m}\left
                            ({\Out i m} = \sigma(\Input i m)\right)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Undefined control sequence.
-l.29 \dv{}{\Input i m}\left({\Out
+l.45 \dv{}{\Input i m}\left({\Out
                                   i m} = \sigma(\Input i m)\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1214,7 +1397,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.29 ...Input i m}\left({\Out i m} = \sigma(\Input
+l.45 ...Input i m}\left({\Out i m} = \sigma(\Input
                                                    i m)\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1225,7 +1408,7 @@ and I'll forget about whatever was undefined.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.31 &
+l.47 &
       = \left(\Out i m\right)\left(1 - \Out i m\right)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1235,7 +1418,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.31 &= \left(\Out
+l.47 &= \left(\Out
                    i m\right)\left(1 - \Out i m\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1244,7 +1427,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.31 &= \left(\Out i m\right)\left(1 - \Out
+l.47 &= \left(\Out i m\right)\left(1 - \Out
                                             i m\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1255,7 +1438,7 @@ and I'll forget about whatever was undefined.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.33 &
+l.49 &
       = \sigma\prime\left(\Input i m\right)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1265,7 +1448,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.33 &= \sigma\prime\left(\Input
+l.49 &= \sigma\prime\left(\Input
                                  i m\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1276,7 +1459,7 @@ and I'll forget about whatever was undefined.
 ! Undefined control sequence.
 <recently read> \dv 
                     
-l.35 \dv
+l.51 \dv
         [2]{{\Out i m}}{{\Input i m}} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1285,7 +1468,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.35 \dv[2]{{\Out
+l.51 \dv[2]{{\Out
                   i m}}{{\Input i m}} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1294,7 +1477,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.35 \dv[2]{{\Out i m}}{{\Input
+l.51 \dv[2]{{\Out i m}}{{\Input
                                 i m}} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1303,7 +1486,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Misplaced alignment tab character &.
-l.35 \dv[2]{{\Out i m}}{{\Input i m}} &
+l.51 \dv[2]{{\Out i m}}{{\Input i m}} &
                                        =
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1313,7 +1496,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.36 \dv
+l.52 \dv
         {}{{\Input i m}}\left(\dv{\Out i m}{\Input i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1322,7 +1505,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 \dv{}{{\Input
+l.52 \dv{}{{\Input
                    i m}}\left(\dv{\Out i m}{\Input i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1331,7 +1514,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 \dv{}{{\Input i m}}\left(\dv
+l.52 \dv{}{{\Input i m}}\left(\dv
                                  {\Out i m}{\Input i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1340,7 +1523,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 \dv{}{{\Input i m}}\left(\dv{\Out
+l.52 \dv{}{{\Input i m}}\left(\dv{\Out
                                        i m}{\Input i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1349,7 +1532,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 \dv{}{{\Input i m}}\left(\dv{\Out i m}{\Input
+l.52 \dv{}{{\Input i m}}\left(\dv{\Out i m}{\Input
                                                    i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1358,7 +1541,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 ...eft(\dv{\Out i m}{\Input i m} = \left(\Out
+l.52 ...eft(\dv{\Out i m}{\Input i m} = \left(\Out
                                                    i m\right)\left(1 - \Out ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1367,7 +1550,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 ...i m} = \left(\Out i m\right)\left(1 - \Out
+l.52 ...i m} = \left(\Out i m\right)\left(1 - \Out
                                                    i m\right)\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1378,7 +1561,7 @@ and I'll forget about whatever was undefined.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.38 &
+l.54 &
       = \left(\Out i m\left(1 - \Out i m\right)\right)\left(1 - 2\Out i m\ri...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1388,7 +1571,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.38 &= \left(\Out
+l.54 &= \left(\Out
                    i m\left(1 - \Out i m\right)\right)\left(1 - 2\Out i m\ri...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1397,7 +1580,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.38 &= \left(\Out i m\left(1 - \Out
+l.54 &= \left(\Out i m\left(1 - \Out
                                      i m\right)\right)\left(1 - 2\Out i m\ri...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1406,7 +1589,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.38 ...(1 - \Out i m\right)\right)\left(1 - 2\Out
+l.54 ...(1 - \Out i m\right)\right)\left(1 - 2\Out
                                                    i m\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1417,7 +1600,7 @@ and I'll forget about whatever was undefined.
 ! Misplaced alignment tab character &.
 <recently read> &
                  
-l.40 &
+l.56 &
       = \sigma\prime\prime\left(\Input i m\right)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1427,7 +1610,7 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.40 &= \sigma\prime\prime\left(\Input
+l.56 &= \sigma\prime\prime\left(\Input
                                        i m\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1442,7 +1625,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.41 \end{align}
+l.57 \end{align}
                 
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -1451,7 +1634,7 @@ or  <return>  to continue without it.
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.41 \end{align}
+l.57 \end{align}
                 
 I've inserted something that you may have forgotten.
 (See the <inserted text> above.)
@@ -1513,7 +1696,7 @@ Missing character: There is no t in font nullfont!
 ! Undefined control sequence.
 <recently read> \Input 
                        
-l.42 ...espect to the $i$th neuron's input $\Input
+l.58 ...espect to the $i$th neuron's input $\Input
                                                    i 0$ in the output layer:
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1545,14 +1728,14 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.43 \begin{align}
+l.59 \begin{align}
                   
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.44 \pdv
+l.60 \pdv
          {E}{\Input i 0} &= \pdv{E}{\Out i 0} \pdv{\Out i 0}{\Input i 0}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1562,7 +1745,7 @@ and I'll forget about whatever was undefined.
 
 Missing character: There is no E in font nullfont!
 ! Undefined control sequence.
-l.44 \pdv{E}{\Input
+l.60 \pdv{E}{\Input
                     i 0} &= \pdv{E}{\Out i 0} \pdv{\Out i 0}{\Input i 0}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1573,7 +1756,7 @@ and I'll forget about whatever was undefined.
 Missing character: There is no i in font nullfont!
 Missing character: There is no 0 in font nullfont!
 ! Misplaced alignment tab character &.
-l.44 \pdv{E}{\Input i 0} &
+l.60 \pdv{E}{\Input i 0} &
                           = \pdv{E}{\Out i 0} \pdv{\Out i 0}{\Input i 0}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
@@ -1584,7 +1767,7 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.44 \pdv{E}{\Input i 0} &= \pdv
+l.60 \pdv{E}{\Input i 0} &= \pdv
                                 {E}{\Out i 0} \pdv{\Out i 0}{\Input i 0}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1594,7 +1777,7 @@ and I'll forget about whatever was undefined.
 
 Missing character: There is no E in font nullfont!
 ! Undefined control sequence.
-l.44 \pdv{E}{\Input i 0} &= \pdv{E}{\Out
+l.60 \pdv{E}{\Input i 0} &= \pdv{E}{\Out
                                          i 0} \pdv{\Out i 0}{\Input i 0}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1605,7 +1788,7 @@ and I'll forget about whatever was undefined.
 Missing character: There is no i in font nullfont!
 Missing character: There is no 0 in font nullfont!
 ! Undefined control sequence.
-l.44 \pdv{E}{\Input i 0} &= \pdv{E}{\Out i 0} \pdv
+l.60 \pdv{E}{\Input i 0} &= \pdv{E}{\Out i 0} \pdv
                                                   {\Out i 0}{\Input i 0}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1614,138 +1797,16 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.44 ...\Input i 0} &= \pdv{E}{\Out i 0} \pdv{\Out
+l.60 ...\Input i 0} &= \pdv{E}{\Out i 0} \pdv{\Out
                                                    i 0}{\Input i 0}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no i in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Undefined control sequence.
-l.44 ...&= \pdv{E}{\Out i 0} \pdv{\Out i 0}{\Input
-                                                   i 0}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-Missing character: There is no i in font nullfont!
-Missing character: There is no 0 in font nullfont!
-! Misplaced alignment tab character &.
-<recently read> &
-                 
-l.46 &
-      = \underbrace{\left(\Out i 0 - \Target i\right)}_{\text{from} \ (\ref{...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-Missing character: There is no = in font nullfont!
-! Missing $ inserted.
-<inserted text> 
-                $
-l.46 ...erbrace{\left(\Out i 0 - \Target i\right)}
-                                                  _{\text{from} \ (\ref{cost...
-I've inserted a begin-math/end-math symbol since I think
-you left one out. Proceed, with fingers crossed.
-
-! Undefined control sequence.
-<argument> \left (\Out 
-                       i 0 - \Target i\right )
-l.46 ...erbrace{\left(\Out i 0 - \Target i\right)}
-                                                  _{\text{from} \ (\ref{cost...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> \left (\Out i 0 - \Target 
-                                     i\right )
-l.46 ...erbrace{\left(\Out i 0 - \Target i\right)}
-                                                  _{\text{from} \ (\ref{cost...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.46 ...{\left(\Out i 0 - \Target i\right)}_{\text
-                                                  {from} \ (\ref{cost_func_d...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<write> ...cost_func_derivative' on page \thepage 
-                                                  \space undefined\on@line .
-l.46 ...{\text{from} \ (\ref{cost_func_derivative}
-                                                  )} \underbrace{\left(\sigm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Reference `cost_func_derivative' on page  undefined on input lin
-e 46.
-
-! Undefined control sequence.
-<argument> \left (\sigma \left (\Input 
-                                       i 0\right )\left (1 - \sigma \left (\...
-l.46 ...igma\left(\Input i 0\right)\right)\right)}
-                                                  _{\text{from} \ (\ref{sigm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<argument> ...ht )\left (1 - \sigma \left (\Input 
-                                                  i 0\right )\right )\right )
-l.46 ...igma\left(\Input i 0\right)\right)\right)}
-                                                  _{\text{from} \ (\ref{sigm...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-l.46 ...ft(\Input i 0\right)\right)\right)}_{\text
-                                                  {from} \ (\ref{sigmoid_der...
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-! Undefined control sequence.
-<write> ... `sigmoid_derivative' on page \thepage 
-                                                  \space undefined\on@line .
-l.46 ...}_{\text{from} \ (\ref{sigmoid_derivative}
-                                                  )}
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
- 20 strings out of 494522
- 329 string characters out of 6167206
+ 14 strings out of 494522
+ 256 string characters out of 6167206
  50238 words of memory out of 5000000
- 3379 multiletter control sequences out of 15000+600000
- 3948 words of font info for 15 fonts, out of 8000000 for 9000
+ 3374 multiletter control sequences out of 15000+600000
+ 3640 words of font info for 14 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 19i,11n,14p,551b,115s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 19i,9n,14p,551b,59s stack positions out of 5000i,500n,10000p,200000b,80000s
 
 !  ==> Fatal error occurred, no output PDF file produced!
