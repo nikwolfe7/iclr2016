@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.5)  15 NOV 2015 17:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.5)  15 NOV 2015 22:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -806,6 +806,7 @@ Missing character: There is no t in font nullfont!
 Missing character: There is no p in font nullfont!
 Missing character: There is no u in font nullfont!
 Missing character: There is no t in font nullfont!
+Missing character: There is no s in font nullfont!
 Missing character: There is no : in font nullfont!
 
 ! LaTeX Error: Environment align undefined.
@@ -1048,13 +1049,13 @@ or  <return>  to continue without it.
 <inserted text> 
                 $
 l.22 \sigma
-           \prime &= \sigma\left(1 - \sigma\right)\label{sigmoid_derivative}
+           \prime(x) &= \sigma(x)\left(1 - \sigma(x)\right)\label{sigmoid_de...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Misplaced alignment tab character &.
-l.22 \sigma\prime &
-                   = \sigma\left(1 - \sigma\right)\label{sigmoid_derivative}
+l.22 \sigma\prime(x) &
+                      = \sigma(x)\left(1 - \sigma(x)\right)\label{sigmoid_de...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1063,8 +1064,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.24 \sigma\prime\prime &
-                         = \sigma\prime\left(1 - 2\sigma\right) \label{sigmo...
+l.24 \sigma\prime\prime(x) &
+                            = \sigma\prime(x)\left(1 - 2\sigma(x)\right) \la...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1134,8 +1135,8 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.28 \pdv
-         {\Out i m}{\Input i m} &=
+l.28 \dv
+        {\Out i m}{\Input i m} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1143,8 +1144,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.28 \pdv{\Out
-               i m}{\Input i m} &=
+l.28 \dv{\Out
+              i m}{\Input i m} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1154,8 +1155,8 @@ and I'll forget about whatever was undefined.
 Missing character: There is no i in font nullfont!
 Missing character: There is no m in font nullfont!
 ! Undefined control sequence.
-l.28 \pdv{\Out i m}{\Input
-                           i m} &=
+l.28 \dv{\Out i m}{\Input
+                          i m} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1165,8 +1166,8 @@ and I'll forget about whatever was undefined.
 Missing character: There is no i in font nullfont!
 Missing character: There is no m in font nullfont!
 ! Misplaced alignment tab character &.
-l.28 \pdv{\Out i m}{\Input i m} &
-                                 =
+l.28 \dv{\Out i m}{\Input i m} &
+                                =
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1176,8 +1177,8 @@ might try typing `S' now just to see what is salvageable.
 
 Missing character: There is no = in font nullfont!
 ! Undefined control sequence.
-l.29 \pdv
-         {}{\Input i m}\left({\Out i m} = \sigma(\Input i m)\right)
+l.29 \dv
+        {}{\Input i m}\left({\Out i m} = \sigma(\Input i m)\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1185,8 +1186,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.29 \pdv{}{\Input
-                   i m}\left({\Out i m} = \sigma(\Input i m)\right)
+l.29 \dv{}{\Input
+                  i m}\left({\Out i m} = \sigma(\Input i m)\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1198,14 +1199,14 @@ Missing character: There is no m in font nullfont!
 ! Missing $ inserted.
 <inserted text> 
                 $
-l.29 \pdv{}{\Input i m}\left
-                            ({\Out i m} = \sigma(\Input i m)\right)
+l.29 \dv{}{\Input i m}\left
+                           ({\Out i m} = \sigma(\Input i m)\right)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Undefined control sequence.
-l.29 \pdv{}{\Input i m}\left({\Out
-                                   i m} = \sigma(\Input i m)\right)
+l.29 \dv{}{\Input i m}\left({\Out
+                                  i m} = \sigma(\Input i m)\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1255,7 +1256,7 @@ and I'll forget about whatever was undefined.
 <recently read> &
                  
 l.33 &
-      = \sigma\prime
+      = \sigma\prime\left(\Input i m\right)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1264,10 +1265,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-<recently read> \pdv 
-                     
-l.35 \pdv
-         [2]{{\Out i m}}{{\Input i m}} &=
+l.33 &= \sigma\prime\left(\Input
+                                 i m\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1275,8 +1274,10 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.35 \pdv[2]{{\Out
-                   i m}}{{\Input i m}} &=
+<recently read> \dv 
+                    
+l.35 \dv
+        [2]{{\Out i m}}{{\Input i m}} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1284,8 +1285,17 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.35 \pdv[2]{{\Out i m}}{{\Input
-                                 i m}} &=
+l.35 \dv[2]{{\Out
+                  i m}}{{\Input i m}} &=
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.35 \dv[2]{{\Out i m}}{{\Input
+                                i m}} &=
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1293,8 +1303,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Misplaced alignment tab character &.
-l.35 \pdv[2]{{\Out i m}}{{\Input i m}} &
-                                        =
+l.35 \dv[2]{{\Out i m}}{{\Input i m}} &
+                                       =
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1303,8 +1313,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.36 \pdv
-         {}{{\Input i m}}\left(\pdv{\Out i m}{\Input i m} = \left(\Out i m\r...
+l.36 \dv
+        {}{{\Input i m}}\left(\dv{\Out i m}{\Input i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1312,8 +1322,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 \pdv{}{{\Input
-                    i m}}\left(\pdv{\Out i m}{\Input i m} = \left(\Out i m\r...
+l.36 \dv{}{{\Input
+                   i m}}\left(\dv{\Out i m}{\Input i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1321,8 +1331,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 \pdv{}{{\Input i m}}\left(\pdv
-                                   {\Out i m}{\Input i m} = \left(\Out i m\r...
+l.36 \dv{}{{\Input i m}}\left(\dv
+                                 {\Out i m}{\Input i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1330,8 +1340,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 \pdv{}{{\Input i m}}\left(\pdv{\Out
-                                         i m}{\Input i m} = \left(\Out i m\r...
+l.36 \dv{}{{\Input i m}}\left(\dv{\Out
+                                       i m}{\Input i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1339,7 +1349,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 ...}{{\Input i m}}\left(\pdv{\Out i m}{\Input
+l.36 \dv{}{{\Input i m}}\left(\dv{\Out i m}{\Input
                                                    i m} = \left(\Out i m\rig...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1348,7 +1358,7 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
-l.36 ...ft(\pdv{\Out i m}{\Input i m} = \left(\Out
+l.36 ...eft(\dv{\Out i m}{\Input i m} = \left(\Out
                                                    i m\right)\left(1 - \Out ...
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -1408,13 +1418,22 @@ and I'll forget about whatever was undefined.
 <recently read> &
                  
 l.40 &
-      = \sigma\prime\prime
+      = \sigma\prime\prime\left(\Input i m\right)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
 up above has ended a previous alignment prematurely,
 you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
+
+! Undefined control sequence.
+l.40 &= \sigma\prime\prime\left(\Input
+                                       i m\right)
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
 
 
 ! LaTeX Error: \begin{document} ended by \end{align}.
@@ -1719,35 +1738,10 @@ and I'll forget about whatever was undefined.
                                                   \space undefined\on@line .
 l.46 ...}_{\text{from} \ (\ref{sigmoid_derivative}
                                                   )}
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-LaTeX Warning: Reference `sigmoid_derivative' on page  undefined on input line 
-46.
-
-! Misplaced alignment tab character &.
-<recently read> &
-                 
-l.48 &
-      = \left(\Out i 0 - \Target i\right)\left(\Out i 0 \left(1 - \Out i 0\r...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
-
-! Undefined control sequence.
-l.48 &= \left(\Out
-                   i 0 - \Target i\right)\left(\Out i 0 \left(1 - \Out i 0\r...
 (That makes 100 errors; please try again.) 
 Here is how much of TeX's memory you used:
  20 strings out of 494522
- 330 string characters out of 6167206
+ 329 string characters out of 6167206
  50238 words of memory out of 5000000
  3379 multiletter control sequences out of 15000+600000
  3948 words of font info for 15 fonts, out of 8000000 for 9000
