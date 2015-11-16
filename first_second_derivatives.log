@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.5)  16 NOV 2015 17:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.5)  16 NOV 2015 17:51
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1047,13 +1047,13 @@ or  <return>  to continue without it.
 <inserted text> 
                 $
 l.22 \sigma
-           \prime(x) &= \sigma(x)\left(1 - \sigma(x)\right)\label{sigmoid_de...
+           ^{\prime}(x) &= \sigma(x)\left(1 - \sigma(x)\right)\label{sigmoid...
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Misplaced alignment tab character &.
-l.22 \sigma\prime(x) &
-                      = \sigma(x)\left(1 - \sigma(x)\right)\label{sigmoid_de...
+l.22 \sigma^{\prime}(x) &
+                         = \sigma(x)\left(1 - \sigma(x)\right)\label{sigmoid...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1062,8 +1062,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.24 \sigma\prime\prime(x) &
-                            = \sigma\prime(x)\left(1 - 2\sigma(x)\right) \la...
+l.24 \sigma^{\prime\prime}(x) &
+                               = \sigma^{\prime}(x)\left(1 - 2\sigma(x)\righ...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1181,13 +1181,13 @@ or  <return>  to continue without it.
 <inserted text> 
                 $
 l.28 \sigma
-           \prime(x) &= \sigma(x)\left(1 - \sigma(x)\right)
+           ^{\prime}(x) &= \sigma(x)\left(1 - \sigma(x)\right)
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
 ! Misplaced alignment tab character &.
-l.28 \sigma\prime(x) &
-                      = \sigma(x)\left(1 - \sigma(x)\right)
+l.28 \sigma^{\prime}(x) &
+                         = \sigma(x)\left(1 - \sigma(x)\right)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1196,8 +1196,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.30 \sigma\prime\prime(x) &
-                            = \dv{}{x}
+l.30 \sigma^{\prime\prime}(x) &
+                               = \dv{}{x}
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1206,8 +1206,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.30 \sigma\prime\prime(x) &= \dv
-                                 {}{x}
+l.30 \sigma^{\prime\prime}(x) &= \dv
+                                    {}{x}
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1215,8 +1215,8 @@ spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
 ! Misplaced alignment tab character &.
-l.34 \sigma\prime\prime(x) &
-                            = f\prime(x)g(x) + f(x)g\prime(x)
+l.34 \sigma^{\prime\prime}(x) &
+                               = f^{\prime}(x)g(x) + f(x)g^{\prime}(x)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1225,8 +1225,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.36 \sigma\prime\prime(x) &
-                            = \sigma\prime(x)(1-\sigma(x)) - \sigma(x)\sigma...
+l.36 \sigma^{\prime\prime}(x) &
+                               = \sigma^{\prime}(x)(1-\sigma(x)) - \sigma(x)...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1235,8 +1235,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.38 \sigma\prime\prime(x) &
-                            = \sigma\prime(x) - 2\sigma(x)\sigma\prime(x)
+l.38 \sigma^{\prime\prime}(x) &
+                               = \sigma^{\prime}(x) - 2\sigma(x)\sigma^{\pri...
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1245,8 +1245,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Misplaced alignment tab character &.
-l.40 \sigma\prime\prime(x) &
-                            = \sigma\prime(x)(1 - 2\sigma(x))
+l.40 \sigma^{\prime\prime}(x) &
+                               = \sigma^{\prime}(x)(1 - 2\sigma(x))
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1437,7 +1437,7 @@ and I'll forget about whatever was undefined.
 <recently read> &
                  
 l.49 &
-      = \sigma\prime\left(\Input i m\right)
+      = \sigma^{\prime}\left(\Input i m\right)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1446,8 +1446,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.49 &= \sigma\prime\left(\Input
-                                 i m\right)
+l.49 &= \sigma^{\prime}\left(\Input
+                                    i m\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -1599,7 +1599,7 @@ and I'll forget about whatever was undefined.
 <recently read> &
                  
 l.56 &
-      = \sigma\prime\prime\left(\Input i m\right)
+      = \sigma^{\prime\prime}\left(\Input i m\right)
 I can't figure out why you would want to use a tab mark
 here. If you just want an ampersand, the remedy is
 simple: Just type `I\&' now. But if some right brace
@@ -1608,8 +1608,8 @@ you're probably due for more error messages, and you
 might try typing `S' now just to see what is salvageable.
 
 ! Undefined control sequence.
-l.56 &= \sigma\prime\prime\left(\Input
-                                       i m\right)
+l.56 &= \sigma^{\prime\prime}\left(\Input
+                                          i m\right)
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct

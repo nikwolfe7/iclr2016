@@ -79,7 +79,7 @@ _{\text{from} \ (\ref{sigmoid_derivative})}
 \\
 \pdv[2]{E}{{\Input i 0}}&= \left(\Out i 0 \left(1 - \Out i 0\right)\right)^2 + \left(\Out i 0 - \Target i\right)\left(\Out i 0 \left(1 - \Out i 0\right)\right)\left(1 - 2\Out i 0\right) 
 \\
-&= \sigma^{\prime}\left(\Input i 0\right)^2 + \left(\Out i 0 - \Target i\right)\sigma^{\prime\prime}\left(\Input i 0\right)\label{d2edx2}
+&= \left(\sigma^{\prime}\left(\Input i 0\right)\right)^2 + \left(\Out i 0 - \Target i\right)\sigma^{\prime\prime}\left(\Input i 0\right)\label{d2edx2}
 \end{align}
 \\[5pt]First derivative of the error with respect to a single input contribution $\Con j i 0$ from neuron $j$ to neuron $i$ with weight $\Weight j i 0$ in the output layer:
 \begin{align}
@@ -131,7 +131,7 @@ _{g\left(\Con j i 0\right)}
 &\left(\Con j i 0 + k = \sum_j{\Con j i 0} = \sum\limits_j {\Weight j i m}{ \Out j {m + 1}} = \Input i 0 \right)
 \\
 \pdv[2]{E}{{\Con j i 0}}&=
-\underbrace{\sigma^{\prime}\left(\Input i 0\right)^2 + 
+\underbrace{\left(\sigma^{\prime}\left(\Input i 0\right)\right)^2 + 
 \left(\Out i 0 - \Target i \right)\sigma^{\prime\prime}\left(\Input i 0\right)}
 _{\text{from} \ (\ref{d2edx2})}
 \\
@@ -203,7 +203,7 @@ _{g\left(\Out j 1\right)}
 &=\sum_i\left(f^{\prime}\left(\Out j 1\right)g\left(\Out j 1\right) + f\left(\Out j 1\right)g^{\prime}\left(\Out j 1\right)\right)
 \\
 &=\sum_i\left(
-\sigma^{\prime}\left(\sum_j{\Weight j i 0}{\Out j 1}\right)\Weight j i 0
+\sigma^{\prime}\left(\sum_j{\Weight j i 0}{\Out j 1}\right)\Weight j i 0 \
 \sigma^{\prime}\left(\sum_j{\Weight j i 0}{\Out j 1}\right)\Weight j i 0
 \right)
 + \ldots \\
