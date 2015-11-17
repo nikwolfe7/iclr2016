@@ -221,10 +221,17 @@ _{\text{from} \ (\ref{d2edx2})}
 \left({\Weight j i 0}\right)^2
 \\
 \pdv[2]{E}{{\Out j 1}} &= \sum_i
-\pdv[2]{E}{{\Input i 0}} \left({\Weight j i 0}\right)^2
+\pdv[2]{E}{{\Input i 0}} \left({\Weight j i 0}\right)^2\label{d2edo2}
 \end{align}
+Note that the equation in (\ref{d2edo2}) does not depend on the form of $\pdv[2]{E}{{\Input x 0}}$, which means we can replace the specific indexes with general ones:
+\begin{align}
+\pdv[2]{E}{{\Out j {m+1}}} &= \sum_i
+\pdv[2]{E}{{\Input i m}} \left({\Weight j i m}\right)^2
+\end{align} 
 \\[5pt]
-At this point we are beginning to see the recursion in the form of the 2nd derivative terms which can be thought of analogously to the first derivative recursion which is central to the back-propagation algorithm. The formulation above which makes specific reference to layer indexes also works in the general case. Consider the $i$th neuron in any layer $m$ with output $\Out i m$ and input $\Input i m$. The first and second derivatives of the error $E$ with respect to this neuron's \textit{input} are: 
+At this point we are beginning to see the recursion in the form of the 2nd derivative terms which can be thought of analogously to the first derivative recursion which is central to the back-propagation algorithm. The formulation above which makes specific reference to layer indexes also works in the general case.
+\\[5pt] 
+Consider the $i$th neuron in any layer $m$ with output $\Out i m$ and input $\Input i m$. The first and second derivatives of the error $E$ with respect to this neuron's \textit{input} are: 
 \begin{align}
 \pdv{E}{\Input i m} &= 
 \pdv{E}{\Out i m}
