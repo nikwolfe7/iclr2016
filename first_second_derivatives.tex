@@ -241,7 +241,8 @@ At this point we are beginning to see the recursion in the form of the 2nd deriv
 \pdv{\Out i m}{\Input i m}
 \right)
 \\
-&= \pdv{{^2}E}{{\Input i m}{\Out i m}}\pdv{\Out i m}{\Input i m}
+&= \pdv{E}{{\Input i m}{\Out i m}}
+\pdv{\Out i m}{\Input i m}
 +
 \pdv{E}{\Out i m}\pdv[2]{{\Out i m}}{{\Input i m}}
 \\
@@ -249,9 +250,13 @@ At this point we are beginning to see the recursion in the form of the 2nd deriv
 +
 \pdv{E}{\Out i m}\sigma^{\prime\prime}\left(\Input i m\right)
 \\
-&=\pdv{}{\Input i m}
-\left(\pdv{E}{{\Input i m}} = \pdv{E}{\Out i m}\pdv{\Out i m}{\Input i m}\right)
+&=\pdv{}{\Input i m}\pdv{E}{\Out i m}\pdv{\Out i m}{\Input i m}
 +
 \pdv{E}{\Out i m}\sigma^{\prime\prime}\left(\Input i m\right)
+\\
+?????&=\pdv[2]{E}{{\Out i m}} \left(\sigma^{\prime}\left({\Input i m}\right)\right)^2
++
+\pdv{E}{{\Out i m}}\sigma^{\prime\prime}\left(\Input i m\right)
 \end{align}
 Both of these terms are easily computable and can be stored as we propagate back from the output of the network to the input. And the derivative of the error $E$ with respect to the output $\Out j {m+1}$ in the $m+1$ layer is:
+\\??????????

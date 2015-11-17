@@ -1,0 +1,192 @@
+\documentclass{article}
+\usepackage{physics}
+\usepackage{amsmath}
+\usepackage{graphicx,import}
+
+\newcommand{\Out}[2]{o_{#1}^{(#2)}}
+\newcommand{\Target}[1]{t_{#1}}
+\newcommand{\Input}[2]{x_{#1}^{(#2)}}
+\newcommand{\Weight}[3]{w_{#1#2}^{(#3)}}
+\newcommand{\Con}[3]{c_{#1#2}^{(#3)}}
+
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+\begin{figure}
+\centering
+\newcommand{\repSigmoid}{$\sigma(\cdot)$}
+\newcommand{\repLinear}{$\sum$}
+\newcommand{\repMse}{MSE}
+\newcommand{\repFirstSum}{$\Input j 1$}
+\newcommand{\repLastSum}{$\Input i 0$}
+\newcommand{\repFirstOutput}{\hspace{1.5cm}$\Con j i 0 \!=\! \Weight j i 0 \Out j 1$}
+\newcommand{\repLastOutput}{$\Out i 0$}
+\newcommand{\repLoss}{$E$}
+\def\svgwidth{0.9\textwidth}
+\import{}{drawing.pdf_tex}
+\end{figure}
+
+Comments:
+\begin{description}
+\item[L:] I think, the notation is still way from optimal since we always need additional parenthesis when your layer index meets an exponent: $(\Out i 0)^2$
+\item[L:] I was talking with Bhiksha this morning. He pointed out, where the recursion actually is. I am not sure, I understood this completely, but we should work on this together tonight. I am as well curious, what your parenthesis down there explain. :P
+\end{description}
+
+
+Name and network definitions:
+\begin{align}
+E &= \sum\limits_i (\Out i 0 - \Target i)^2 &
+\Out i 0 &= \sigma(\Input 0 i) \\
+\Input i 0 &= \sum\limits_j \Weight j i 0 \Out j 1 &
+\Con j i 0 &= \Weight j i 0 \Out j 1 \\
+\Con j i 0 &= \Weight j i 0 \Out j 1 &
+\Con j i 0 &= \Weight j i 0 \Out j 1
+\end{align}
+
+Derivatives with respect to network output:
+\begin{align}
+\pdv{E}{\Out i 0} &= \Out i 0 - \Target i &
+\pdv[2]{E}{(\Out i 0)} &= 1
+\end{align}
+
+First and second derivative of the sigmoid function:
+\begin{align}
+\sigma' &= \sigma(1 - \sigma) &
+\sigma'' &= \sigma' (1 - 2 \sigma)
+\end{align}
+
+Derivative with respect to last layer output:
+\begin{align}
+\pdv{E}{\Input i 0} &= \pdv{E}{\Out i 0} \pdv{\Out i 0}{\Input i 0} \\
+&= (\Out i 0 - \Target i)(\Out i 0 (1 - \Out i 0))
+\end{align}
+
+Second derivative with respect to last layer output:
+\begin{align}
+\pdv[2]{E}{(\Input i 0)} &= \pdv{}{\Input i 0}
+\left(
+\pdv{E}{\Out i 0}
+\pdv{\Out i 0}{\Input i 0}
+\right) \\
+&= \pdv[2]{\Input i 0}{(\Out i 0)}\pdv{\Out i 0}{\Input i 0}
++ \pdv{E}{\Out i 0}\pdv[2]{\Out i 0}{(\Input i 0)} \\
+&= \pdv[2]{\Input i 0}{(\Out i 0)} \Out i 0 (1 - \Out i 0)
++ (\Out i 0 - \Target i)\pdv{\Out i 0}{\Input i 0}(1 - 2 \Out i 0) \\
+&= \sigma'(\Input i 0)\Out i 0(1 - \Out i 0)
++ (\Out i 0 - \Target i)\sigma'(\Input i 0)(1 - 2 \Out i 0)
+\end{align}
+
+First derivative with respect to single input contribution:
+\begin{align}
+\pdv{E}{\Con i j 0} &= \pdv{E}{\Out i 0}\pdv{\Out i 0}{\Input i 0}
+\cdot
+\cdot
+\cdot
+\cdot\pdv{\Input i 0}{\Con j i 0}\\
+&= \left(\Out i 0 - \Target i \right) \underbrace{\left(\Out i 0 \left(1 - \Out i 0\right) \right)}_{\sigma'}
+\end{align}
+Where we use:
+\begin{align}
+\pdv{\Input i 0}{\Con j i 0} = \pdv{}{\Con j i 0}\left( \sum\Weight j i 0\Out j 1 \right) = \pdv{}{\Con j i 0} \left(\Con j i 0 + k \right) = 1\\
+\end{align}
+Second derivative with respect to single input contribution:
+\begin{align}
+\pdv[2]{E}{(\Con i j 0)} &= \pdv{E}{\Con j i 0}{\Out i 0}
+\cdot\pdv{\Out i 0}{\Input i 0}
+\cdot\pdv{\Input i 0}{\Con j i 0} + \ldots\\
+& \pdv{E}{\Out i 0}\cdot
+\cdot
+\cdot
+\cdot\pdv{\Out i 0}{\Con j i 0}{\Input i 0}
+
+\cdot\pdv{\Input i 0}{(((\Con j i 0} + \ldots\\
+& \pdv{E}{\Out i 0}
+\cdot
+\cdot
+\cdot
+\cdot
+\cdot
+\cdot
+\cdot
+\cdot
+\cdot
+\cdot\pdv{\Out i 0}{\Input i 0}
+
+
+
+\cdot\pdv{\Input i 0}{((((((((((\Con j i 0))))))))))} \label{zeroterm}
+
+
+
+
+
+
+
+
+
+\end{align}
+
+
+
+
+
+
+
+
+
+
+Term \ref{zeroterm} is just zero, of course. Then, plugging in...
+\begin{align}
+\pdv[2]{E}{((((((((((\Con i j 0)))))))))))))} &= \pdv{}{\Con i j 0}\left(\Out i 0 - \Target i \right) \pdv{\Out i 0}{\Input i 0} + \left(\Out i 0 - \Target i \right) \pdv{}{\Con j i 0} \pdv{\Out i 0}{\Input i 0}\\
+&= \left(\pdv{\Out i 0}{\Input i 0}\right)^2 + \left(\Out i 0 - \Target i \right) \sigma''\left(\Input i 0\right)\\
+&= \left(\sigma'\left(\Input i 0\right)\right)^2 + \left(\Out i 0 - \Target i \right) \sigma''\left(\Input i 0\right)
+\end{align}
+
+Moving on to the next layer, we have:
+\begin{align}
+\pdv{E}{\Out j 1} &= \pdv{E}{\Out i 0}
+\cdot
+\cdot
+\cdot
+\cdot\pdv{\Out i 0}{\Input i 0}
+\cdot
+\cdot
+\cdot
+\cdot\pdv{\Input i 0}{\Con j i 0}
+\cdot\pdv{\Con j i 0}{\Out j 1}
+= \left(\Out i 0 - \Target i\right)\sigma'(\Input i 0)\Weight j i 0
+\end{align}
+
+\begin{align}
+\pdv[2]{E}{((((\Out j 1)))))))))))))} &= \pdv[2]{E}{(((((((((\Out j 1}{\Out i 0}
+\cdot\pdv{\Out i 0}{\Input i 0}
+\cdot
+\cdot
+\cdot
+\cdot\pdv{\Input i 0}{\Con j i 0}
+\cdot\pdv{\Con j i 0}{\Out j 1}
++ \pdv{E}{\Out i 0}
+\cdot\pdv[2]{\Out i 0}{\Out j 1}{\Input i 0}
+\cdot
+\cdot
+\cdot
+\cdot\pdv{\Input i 0}{\Con j i 0}
+\cdot\pdv{\Con j i 0}{\Out j 1} \notag \\
+&\quad+ \pdv{E}{\Out i 0}
+\cdot\pdv{\Out i 0}{\Input i 0}
+\cdot
+\cdot
+\cdot
+\cdot\pdv[2]{\Input i 0}{\Out j 1}{\Con j i 0}
+\cdot\pdv{\Con j i 0}{\Out j 1}
++ \pdv{E}{\Out i 0}
+\cdot\pdv{\Out i 0}{\Input i 0}
+\cdot
+\cdot
+\cdot
+\cdot\pdv{\Input i 0}{\Con j i 0}
+\cdot\pdv[2]{\Con j i 0}{((((((((((\Out j 1)))))))))))))} \\
+&= \left(\sigma'(\Input i 0)((((((\Weight j i 0\right)^2 + \left(\Out i 0 - \Target i\right)\sigma''(\Input i 0)(((((((\Weight j i 0)))))))))))))^2
+\end{align}
+\end{document}
