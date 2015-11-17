@@ -141,7 +141,7 @@ _{\text{from} \ (\ref{d2edx2})}
 \begin{align}
 &\pdv{E}{\Out i 0} = \Out i 0 - \Target i 
 &
-\pdv[2]{E}{(\Out i 0)} = 1
+\pdv[2]{E}{{\Out i 0}} = 1
 \end{align}
 \begin{align}
 &\pdv{E}{\Input i 0} = \left(\Out i 0 - \Target i\right)\sigma^{\prime}\left(\Input i 0\right)
@@ -223,26 +223,35 @@ _{\text{from} \ (\ref{d2edx2})}
 \pdv[2]{E}{{\Out j 1}} &= \sum_i
 \pdv[2]{E}{{\Input i 0}} \left({\Weight j i 0}\right)^2
 \end{align}
-At this point we are beginning to see a recursion in the form of the 2nd derivative terms which can be considered analogous to the first derivative recursion which is central to the back-propagation algorithm. The formulation above which makes specific reference to layer indexes also works in the general case, as shown below:
-
-
-
-%
-%\begin{align}
-%\pdv[2]{E}{\Out j 1} &= \pdv[2]{E}{\Out j 1}{\Out i 0}
-%\cdot\pdv{\Out i 0}{\Input i 0}\pdv{\Input i 0}{\Con j i 0}
-%\cdot\pdv{\Con j i 0}{\Out j 1}
-%+ \pdv{E}{\Out i 0}
-%\cdot\pdv[2]{\Out i 0}{\Out j 1}{\Input i 0}
-%\cdot\pdv{\Input i 0}{\Con j i 0}
-%\cdot\pdv{\Con j i 0}{\Out j 1} \notag \\
-%&\quad+ \pdv{E}{\Out i 0}
-%\cdot\pdv{\Out i 0}{\Input i 0}
-%\cdot\pdv[2]{\Input i 0}{\Out j 1}{\Con j i 0}
-%\cdot\pdv{\Con j i 0}{\Out j 1}
-%+ \pdv{E}{\Out i 0}
-%\cdot\pdv{\Out i 0}{\Input i 0}
-%\cdot\pdv{\Input i 0}{\Con j i 0}
-%\cdot\pdv[2]{\Con j i 0}{\Out j 1} \\
-%&= \left(\sigma'(\Input i 0)\Weight j i 0\right)^2 + \left(\Out i 0 - \Target i\right)\sigma''(\Input i 0)\Weight j i 0^2
-%\end{align}
+\\[5pt]
+At this point we are beginning to see the recursion in the form of the 2nd derivative terms which can be thought of analogously to the first derivative recursion which is central to the back-propagation algorithm. The formulation above which makes specific reference to layer indexes also works in the general case. Consider the $i$th neuron in any layer $m$ with output $\Out i m$ and input $\Input i m$. The first and second derivatives of the error $E$ with respect to this neuron's \textit{input} are: 
+\begin{align}
+\pdv{E}{\Input i m} &= 
+\pdv{E}{\Out i m}
+\pdv{\Out i m}{\Input i m}\label{dedx_general}
+\end{align}
+\begin{align}
+\pdv[2]{E}{{\Input i m}} &= 
+\pdv{}{{\Input i m}}
+\pdv{E}{{\Input i m}} 
+\\
+&= \pdv{}{\Input i m}
+\left(
+\pdv{E}{\Out i m}
+\pdv{\Out i m}{\Input i m}
+\right)
+\\
+&= \pdv{{^2}E}{{\Input i m}{\Out i m}}\pdv{\Out i m}{\Input i m}
++
+\pdv{E}{\Out i m}\pdv[2]{{\Out i m}}{{\Input i m}}
+\\
+&=\pdv{}{\Input i m}\pdv{E}{\Out i m}\pdv{\Out i m}{\Input i m}
++
+\pdv{E}{\Out i m}\sigma^{\prime\prime}\left(\Input i m\right)
+\\
+&=\pdv{}{\Input i m}
+\left(\pdv{E}{{\Input i m}} = \pdv{E}{\Out i m}\pdv{\Out i m}{\Input i m}\right)
++
+\pdv{E}{\Out i m}\sigma^{\prime\prime}\left(\Input i m\right)
+\end{align}
+Both of these terms are easily computable and can be stored as we propagate back from the output of the network to the input. And the derivative of the error $E$ with respect to the output $\Out j {m+1}$ in the $m+1$ layer is:
