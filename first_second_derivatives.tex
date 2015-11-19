@@ -38,6 +38,7 @@ The second derivative of the sigmoid is easily derived from the first derivative
 \\
 \sigma^{\prime\prime}(x) &= \sigma^{\prime}(x)(1 - 2\sigma(x))
 \end{align}
+
 And for future convenience: 
 \begin{align}
 \dv{\Out i m}{\Input i m} &= 
@@ -54,6 +55,7 @@ And for future convenience:
 \\
 &= \sigma^{\prime\prime}\left(\Input i m\right)
 \end{align}
+
 Derivative of the error with respect to the $i$th neuron's input $\Input i 0$ in the output layer:
 \begin{align}
 \pdv{E}{\Input i 0} &= \pdv{E}{\Out i 0} \pdv{\Out i 0}{\Input i 0} 
@@ -65,6 +67,7 @@ _{\text{from} \ (\ref{sigmoid_derivative})}
 \\
 &= \left(\Out i 0 - \Target i\right)\sigma^{\prime}\left(\Input i 0\right)\label{dedx}
 \end{align}
+
 Second derivative of the error with respect to the $i$th neuron's input $\Input i 0$ in the output layer:
 \begin{align}
 \pdv[2]{E}{{\Input i 0}} &= \pdv{}{\Input i 0}
@@ -83,6 +86,7 @@ Second derivative of the error with respect to the $i$th neuron's input $\Input 
 \\
 &= \left(\sigma^{\prime}\left(\Input i 0\right)\right)^2 + \left(\Out i 0 - \Target i\right)\sigma^{\prime\prime}\left(\Input i 0\right)\label{d2edx2}
 \end{align}
+
 First derivative of the error with respect to a single input contribution $\Con j i 0$ from neuron $j$ to neuron $i$ with weight $\Weight j i 0$ in the output layer:
 \begin{align}
 \pdv{E}{\Con j i 0} &= 
@@ -101,6 +105,7 @@ _{\text{from} \ (\ref{dedx})}
 \\
 \pdv{E}{\Con j i 0} &= \pdv{E}{\Input i 0}
 \end{align}
+
 Second derivative of the error with respect to a single input contribution $\Con j i 0$:
 \begin{align}
 \pdv[2]{E}{{\Con j i 0}} &=
@@ -121,7 +126,10 @@ _{\text{from} \ (\ref{dedc})}
 _{f\left(\Con j i 0\right)}
 \underbrace{\sigma^{\prime}\left({\Con j i 0} + k\right)}
 _{g\left(\Con j i 0\right)}
-\\
+\end{align}
+
+We now make use of the abbreviations $f$ and $g$:
+\begin{align}
 &=f^{\prime}\left(\Con j i 0\right)g\left(\Con j i 0\right) + f\left(\Con j i 0\right)g^{\prime}\left(\Con j i 0\right)
 \\
 &=\sigma^{\prime}\left({\Con j i 0} + k\right)\sigma^{\prime}\left({\Con j i 0} + k\right) + 
@@ -139,6 +147,8 @@ _{\text{from} \ (\ref{d2edx2})}
 \\
 \pdv[2]{E}{{\Con j i 0}} &= \pdv[2]{E}{{\Input i 0}}
 \end{align}
+
+
 \subsubsection{Summary Of Output Layer Derivatives}
 \begin{align}
 &\pdv{E}{\Out i 0} = \Out i 0 - \Target i 
@@ -155,6 +165,8 @@ _{\text{from} \ (\ref{d2edx2})}
 &
 \pdv[2]{E}{{\Con j i 0}} = \pdv[2]{E}{{\Input i 0}}
 \end{align}
+
+
 \subsubsection{Hidden Layer Derivatives}
 The first derivative of the error with respect to a neuron with output $\Out j 1$ in the first hidden layer, summing over all partial derivative contributions from the output layer:
 \begin{align}
@@ -190,9 +202,13 @@ The second derivative of the error with respect to a neuron with output $\Out j 
 &= \pdv{}{\Out j 1}
 \sum_i
 \left(\Out i 0 - \Target i\right)\sigma^{\prime}\left(\Input i 0\right)\Weight j i 0
-\\
-&{\Out i 0} = \sigma\left({\Input i 0}\right) = \sigma\left(\sum_j\left({\Weight j i 0}{\Out j 1}\right)\right)
-\\
+\end{align}
+
+If we now make use of the fact, that 
+${\Out i 0} = \sigma\left({\Input i 0}\right) = \sigma\left(\sum_j\left({\Weight j i 0}{\Out j 1}\right)\right)$, we can evaluate the expression further.
+
+\begin{align}
+\pdv[2]{E}{{\Out j 1}}
 &= \pdv{}{\Out j 1}
 \sum_i
 \underbrace{\left(\sigma\left(\sum_j{\Weight j i 0}{\Out j 1}\right) - \Target i\right)}
@@ -225,7 +241,10 @@ _{g\left(\Out j 1\right)}
 \sigma^{\prime\prime}\left(\Input i 0\right)\right)}
 _{\text{from} \ (\ref{d2edx2})}
 \left({\Weight j i 0}\right)^2
-\\
+\end{align}
+
+Summing up, we obtain the more general expression:
+\begin{align}
 \pdv[2]{E}{{\Out j 1}} &= 
 \sum_i\pdv[2]{E}{{\Input i 0}} \left({\Weight j i 0}\right)^2\label{d2edo2}
 \end{align}
@@ -300,4 +319,26 @@ _{\text{from} \ (\ref{de2do2_general})}
 _{\text{from} \ (\ref{dedo_general})}
 \sigma^{\prime\prime}\left(\Input j {m+1}\right)
 \end{align}
-And this horrible mouthful of an equation gives you a general form for any neuron in the $j$th position of the $m+1$ layer. Taking very careful note of the indexes, this can be more or less translated painlessly to code. You are welcome, world. 
+And this horrible mouthful of an equation gives you a general form for any neuron in the $j$th position of the $m+1$ layer. Taking very careful note of the indexes, this can be more or less translated painlessly to code. You are welcome, world.
+
+\subsubsection{Summary Of Hidden Layer Derivatives}
+\begin{align}
+\pdv{E}{\Out j {m+1}} &= \sum_i\pdv{E}{\Input i m}\Weight j i m &
+\pdv[2]{E}{{\Out j {m+1}}} &= 
+\sum_i\pdv[2]{E}{{\Input i m}} \left({\Weight j i m}\right)^2
+\end{align}
+\begin{align}
+\pdv{E}{\Input i m} &= 
+\pdv{E}{\Out i m}
+\pdv{\Out i m}{\Input i m} \\
+\pdv[2]{E}{{\Input j {m+1}}} &= 
+\pdv[2]{E}{{\Out j {m+1}}}
+\left(\sigma^{\prime}\left({\Input j {m+1}}\right)\right)^2
++
+\pdv{E}{{\Out j {m+1}}}\sigma^{\prime\prime}\left(\Input j {m+1}\right)
+\end{align}
+\begin{align}
+&\pdv{E}{{\Con j i m}} = ...
+&
+\pdv[2]{E}{{\Con j i m}} = ...
+\end{align}
