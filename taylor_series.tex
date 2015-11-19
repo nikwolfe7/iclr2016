@@ -1,7 +1,25 @@
-\subsection{Taylor Series}
-Consider a function:
+\section{Taylor Series Representation of Error}
+Let us denote the total error from the optimally trained neural network for any given validation dataset with $N$ instances as $\Etotal$. Then,
 \begin{align}
-E\left({\Out i m}\right)
+\Etotal = \sum _n E_n,
+\end{align}
+where $E_n$ is the error from the network over one validation instance. $E_n$ can be seen as a function $O$, where $O$ is the output of any general neuron in the network (In reality this error depends on each neuron's output, but for the sake of simplicity we use $O$ to represent that). This error can be approximated at a particular neuron's output (say $O_k$) by using the 2nd order Taylor Series as,
+
+\begin{align}
+\hat E_n(O) \approx E_n(O_k) + (O-O_k)\cdot E_n(O_k) + \left.\pdv{E_n}{O}\right|_{O_k} +  0.5\cdot (O-O_k)^2\cdot \left.\pdv[2]{E_n}{O}\right|_{O_k}\label{eq:ts1},
 \end{align}
 
+where $\hat E_n(O_k)$ represents the contribution of a neuron $k$ to the total error $E_n$ of the network for any given validation instance $n$. When this neuron is pruned, its output $O_k$ becomes 0. From equation \ref{eq:ts1}, the contribution $E_n(0)$ of this neuron, then becomes:
+
+\begin{align}
+\hat E_n(0) \approx E_n(O_k) - O_k\cdot \left.\pdv{E_n}{O}\right|_{O_k} +  0.5\cdot O_k^2\cdot \left.\pdv[2]{E_n}{O}\right|_{O_k}\label{eq:ts2}
+\end{align}
+
+Replacing $O$ by $O_k$ in equation \ref{eq:ts1} shows us that the error is approximated perfectly by equation \ref{eq:ts1} at $O_k$. Using this and equation \ref{eq:ts2} we get:
+
+\begin{align}
+\Delta E_{n,k} = \hat E_n(0) - \hat E_n(O_k)= - O_k\cdot \left.\pdv{E_n}{O}\right|_{O_k} + 0.5\cdot O_k^2\cdot \left.\pdv[2]{E_n}{O}\right|_{O_k},
+\end{align}
+
+where $\Delta E_{n,k}$ is the change in the total error of the network given a validation instance $n$, when exactly one neuron ($k$) is turned off.
 
