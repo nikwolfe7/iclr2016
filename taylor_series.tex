@@ -1,4 +1,4 @@
-\section{Taylor Series Representation of Error}
+\subsubsection{Taylor Series Representation of Error}
 Let us denote the total error from the optimally trained neural network for any given validation dataset with $N$ instances as $\Etotal$. Then,
 \begin{align}
 \Etotal = \sum _n E_n,
@@ -18,7 +18,7 @@ where $\hat E_n(O_k)$ represents the contribution of a neuron $k$ to the total e
 Replacing $O$ by $O_k$ in equation \ref{eq:ts1} shows us that the error is approximated perfectly by equation \ref{eq:ts1} at $O_k$. Using this and equation \ref{eq:ts2} we get:
 
 \begin{align}
-\Delta E_{n,k} = \hat E_n(0) - \hat E_n(O_k)= - O_k\cdot \left.\pdv{E_n}{O}\right|_{O_k} + 0.5\cdot O_k^2\cdot \left.\pdv[2]{E_n}{O}\right|_{O_k},
+\Delta E_{n,k} = \hat E_n(0) - \hat E_n(O_k)= - O_k\cdot \left.\pdv{E_n}{O}\right|_{O_k} + 0.5\cdot O_k^2\cdot \left.\pdv[2]{E_n}{O}\right|_{O_k}\label{eq:ts3},
 \end{align}
 
 where $\Delta E_{n,k}$ is the change in the total error of the network given a validation instance $n$, when exactly one neuron ($k$) is turned off.
