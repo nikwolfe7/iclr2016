@@ -1,7 +1,7 @@
 \subsubsection{Taylor Series Representation of Error}
 Let us denote the total error from the optimally trained neural network for any given validation dataset with $N$ instances as $\Etotal$. Then,
 \begin{align}
-\Etotal = \sum _n E_n,
+\Etotal = \sum_n E_n,
 \end{align}
 where $E_n$ is the error from the network over one validation instance. $E_n$ can be seen as a function $O$, where $O$ is the output of any general neuron in the network (In reality this error depends on each neuron's output, but for the sake of simplicity we use $O$ to represent that). This error can be approximated at a particular neuron's output (say $O_k$) by using the 2nd order Taylor Series as,
 

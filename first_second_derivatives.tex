@@ -1,6 +1,6 @@
 \pagebreak
-\section{Second Derivative Back-Propagation}
-Name and network definitions:\\[5pt]
+\section{Appendix A: Second Derivative Back-Propagation}
+Name and network definitions:\\
 \begin{align}
 E &= \frac{1}{2}\sum\limits_i (\Out i 0 - \Target i)^2 &
 \Out i m &= \sigma(\Input i m) &
@@ -16,7 +16,6 @@ The first and second derivatives of the cost function with respect to the output
 \begin{align}
 \pdv[2]{E}{{\Out i 0}} &= 1\label{cost_func_2nd_derivative}
 \end{align}
-\\[5pt]
 The first and second derivatives of the sigmoid function in forms depending only on the output:
 \begin{align}
 \sigma^{\prime}(x) &= \sigma(x)\left(1 - \sigma(x)\right)\label{sigmoid_derivative} 
@@ -55,7 +54,7 @@ And for future convenience:
 \\
 &= \sigma^{\prime\prime}\left(\Input i m\right)
 \end{align}
-\\[5pt]Derivative of the error with respect to the $i$th neuron's input $\Input i 0$ in the output layer:
+Derivative of the error with respect to the $i$th neuron's input $\Input i 0$ in the output layer:
 \begin{align}
 \pdv{E}{\Input i 0} &= \pdv{E}{\Out i 0} \pdv{\Out i 0}{\Input i 0} 
 \\
@@ -66,22 +65,25 @@ _{\text{from} \ (\ref{sigmoid_derivative})}
 \\
 &= \left(\Out i 0 - \Target i\right)\sigma^{\prime}\left(\Input i 0\right)\label{dedx}
 \end{align}
-\\[5pt]Second derivative of the error with respect to the $i$th neuron's input $\Input i 0$ in the output layer:
+Second derivative of the error with respect to the $i$th neuron's input $\Input i 0$ in the output layer:
 \begin{align}
 \pdv[2]{E}{{\Input i 0}} &= \pdv{}{\Input i 0}
 \left(\pdv{E}{\Out i 0}\pdv{\Out i 0}{\Input i 0}\right) 
 \\
-&= \pdv{{^2}E}{{\Input i 0}{\Out i 0}}\pdv{\Out i 0}{\Input i 0} + \pdv{E}{\Out i 0}\pdv[2]{\Out i 0}{{\Input i 0}}
+&= \pdv{E}{\Input i 0}{\Out i 0}
+\pdv{\Out i 0}{\Input i 0} + \pdv{E}{\Out i 0}\pdv[2]{\Out i 0}{{\Input i 0}}
 \\
-&= \pdv{{^2}E}{{\Input i 0}{\Out i 0}}\underbrace{\left(\Out i 0 \left(1 - \Out i 0\right)\right)}_{{\text{from} \ (\ref{sigmoid_derivative})}} + \underbrace{\left(\Out i 0 - \Target i\right)}_{\text{from} \ (\ref{cost_func_derivative})}\underbrace{\left(\Out i 0 \left(1 - \Out i 0\right)\right)\left(1 - 2\Out i 0\right) }_{\text{from}\ (\ref{sigmoid_2nd_derivative})}
+&= \pdv{E}{\Input i 0}{\Out i 0}
+\underbrace{\left(\Out i 0 \left(1 - \Out i 0\right)\right)}_{{\text{from} \ (\ref{sigmoid_derivative})}} + \underbrace{\left(\Out i 0 - \Target i\right)}_{\text{from} \ (\ref{cost_func_derivative})}\underbrace{\left(\Out i 0 \left(1 - \Out i 0\right)\right)\left(1 - 2\Out i 0\right) }_{\text{from}\ (\ref{sigmoid_2nd_derivative})}
 \\
-\left(\pdv{{^2}E}{{\Input i 0}{\Out i 0}}\right) &= \pdv{}{\Input i 0}\pdv{E}{\Out i 0} = \pdv{}{\Input i 0}\underbrace{\left(\Out i 0 - \Target i\right)}_{\text{from} \ (\ref{cost_func_derivative})} = \pdv{\Out i 0}{\Input i 0} = \underbrace{\left(\Out i 0 \left(1 - \Out i 0\right)\right)}_{{\text{from} \ (\ref{sigmoid_derivative})}} 
+\left(\pdv{E}{\Input i 0}{\Out i 0}\right)
+&= \pdv{}{\Input i 0}\pdv{E}{\Out i 0} = \pdv{}{\Input i 0}\underbrace{\left(\Out i 0 - \Target i\right)}_{\text{from} \ (\ref{cost_func_derivative})} = \pdv{\Out i 0}{\Input i 0} = \underbrace{\left(\Out i 0 \left(1 - \Out i 0\right)\right)}_{{\text{from} \ (\ref{sigmoid_derivative})}} 
 \\
 \pdv[2]{E}{{\Input i 0}}&= \left(\Out i 0 \left(1 - \Out i 0\right)\right)^2 + \left(\Out i 0 - \Target i\right)\left(\Out i 0 \left(1 - \Out i 0\right)\right)\left(1 - 2\Out i 0\right) 
 \\
 &= \left(\sigma^{\prime}\left(\Input i 0\right)\right)^2 + \left(\Out i 0 - \Target i\right)\sigma^{\prime\prime}\left(\Input i 0\right)\label{d2edx2}
 \end{align}
-\\[5pt]First derivative of the error with respect to a single input contribution $\Con j i 0$ from neuron $j$ to neuron $i$ with weight $\Weight j i 0$ in the output layer:
+First derivative of the error with respect to a single input contribution $\Con j i 0$ from neuron $j$ to neuron $i$ with weight $\Weight j i 0$ in the output layer:
 \begin{align}
 \pdv{E}{\Con j i 0} &= 
 \pdv{E}{\Out i 0}
@@ -172,6 +174,10 @@ _{\text{from} \ (\ref{dedx})}
 \\
 \pdv{E}{\Out j 1} &= \sum_i\pdv{E}{\Input i 0}\Weight j i 0
 \end{align}
+Note that this equation does not depend on the specific form of $\pdv{E}{\Input i 0}$, whether it involves a sigmoid or any other activation function. We can therefore replace the specific indexes with general ones, and use this equation in the future.
+\begin{align}
+\pdv{E}{\Out j {m+1}} &= \sum_i\pdv{E}{\Input i m}\Weight j i m\label{dedo_general}
+\end{align}
 The second derivative of the error with respect to a neuron with output $\Out j 1$ in the first hidden layer:
 \begin{align}
 \pdv[2]{E}{{\Out j 1}} &= 
@@ -220,17 +226,16 @@ _{g\left(\Out j 1\right)}
 _{\text{from} \ (\ref{d2edx2})}
 \left({\Weight j i 0}\right)^2
 \\
-\pdv[2]{E}{{\Out j 1}} &= \sum_i
-\pdv[2]{E}{{\Input i 0}} \left({\Weight j i 0}\right)^2\label{d2edo2}
+\pdv[2]{E}{{\Out j 1}} &= 
+\sum_i\pdv[2]{E}{{\Input i 0}} \left({\Weight j i 0}\right)^2\label{d2edo2}
 \end{align}
 Note that the equation in (\ref{d2edo2}) does not depend on the form of $\pdv[2]{E}{{\Input x 0}}$, which means we can replace the specific indexes with general ones:
 \begin{align}
 \pdv[2]{E}{{\Out j {m+1}}} &= \sum_i
-\pdv[2]{E}{{\Input i m}} \left({\Weight j i m}\right)^2
+\pdv[2]{E}{{\Input i m}} \left({\Weight j i m}\right)^2\label{de2do2_general}
 \end{align} 
-\\[5pt]
 At this point we are beginning to see the recursion in the form of the 2nd derivative terms which can be thought of analogously to the first derivative recursion which is central to the back-propagation algorithm. The formulation above which makes specific reference to layer indexes also works in the general case.
-\\[5pt] 
+\\ 
 Consider the $i$th neuron in any layer $m$ with output $\Out i m$ and input $\Input i m$. The first and second derivatives of the error $E$ with respect to this neuron's \textit{input} are: 
 \begin{align}
 \pdv{E}{\Input i m} &= 
@@ -248,22 +253,51 @@ Consider the $i$th neuron in any layer $m$ with output $\Out i m$ and input $\In
 \pdv{\Out i m}{\Input i m}
 \right)
 \\
-&= \pdv{E}{{\Input i m}{\Out i m}}
+&= \pdv{E}{\Input i m}{\Out i m}
 \pdv{\Out i m}{\Input i m}
 +
 \pdv{E}{\Out i m}\pdv[2]{{\Out i m}}{{\Input i m}}
 \\
-&=\pdv{}{\Input i m}\pdv{E}{\Out i m}\pdv{\Out i m}{\Input i m}
+&=\pdv{}{{\Out i m}}
+\left(\pdv{E}{\Input i m} = \pdv{E}{{\Out i m}}\pdv{{\Out i m}}{{\Input i m}}\right)
+\pdv{{\Out i m}}{{\Input i m}}
 +
 \pdv{E}{\Out i m}\sigma^{\prime\prime}\left(\Input i m\right)
 \\
-&=\pdv{}{\Input i m}\pdv{E}{\Out i m}\pdv{\Out i m}{\Input i m}
+&=\pdv[2]{E}{{\Out i m}}
+\left
+(\pdv{{\Out i m}}{{\Input i m}}
+\pdv{{\Out i m}}{{\Input i m}}
+\right)
 +
 \pdv{E}{\Out i m}\sigma^{\prime\prime}\left(\Input i m\right)
 \\
-?????&=\pdv[2]{E}{{\Out i m}} \left(\sigma^{\prime}\left({\Input i m}\right)\right)^2
+\pdv[2]{E}{{\Input i m}} &= 
+\pdv[2]{E}{{\Out i m}} \left(\sigma^{\prime}\left({\Input i m}\right)\right)^2
 +
 \pdv{E}{{\Out i m}}\sigma^{\prime\prime}\left(\Input i m\right)
 \end{align}
-Both of these terms are easily computable and can be stored as we propagate back from the output of the network to the input. And the derivative of the error $E$ with respect to the output $\Out j {m+1}$ in the $m+1$ layer is:
-\\??????????
+Note the form of this equation is the general form of what was derived for the output layer in (\ref{d2edx2}). Both of the above first and second terms are easily computable and can be stored as we propagate back from the output of the network to the input. With respect to the output layer, the first and second derivative terms have already been derived above. In the case of the $m + 1$ hidden layer during back propagation, there is a summation of terms calculated in the $m$th layer. For the first derivative, we have this from (\ref{dedo_general}).
+\begin{align}
+\pdv{E}{\Out j {m+1}} &= \sum_i\pdv{E}{\Input i m}\Weight j i m
+\end{align}
+And the second derivative for the $j$th neuron in the $m+1$ layer:
+\begin{align}
+\pdv[2]{E}{{\Input j {m+1}}} &= 
+\pdv[2]{E}{{\Out j {m+1}}}
+\left(\sigma^{\prime}\left({\Input j {m+1}}\right)\right)^2
++
+\pdv{E}{{\Out j {m+1}}}\sigma^{\prime\prime}\left(\Input j {m+1}\right)
+\end{align}
+We can replace both derivative terms with the forms which depend on the previous layer:
+\begin{align}
+\pdv[2]{E}{{\Input j {m+1}}} &= 
+\underbrace{\sum_i\pdv[2]{E}{{\Input i 0}} \left({\Weight j i 0}\right)^2}
+_{\text{from} \ (\ref{de2do2_general})}
+\left(\sigma^{\prime}\left({\Input j {m+1}}\right)\right)^2
++
+\underbrace{\sum_i\pdv{E}{\Input i m}\Weight j i m}
+_{\text{from} \ (\ref{dedo_general})}
+\sigma^{\prime\prime}\left(\Input j {m+1}\right)
+\end{align}
+And this horrible mouthful of an equation gives you a general form for any neuron in the $j$th position of the $m+1$ layer. Taking very careful note of the indexes, this can be more or less translated painlessly to code. You are welcome, world. 

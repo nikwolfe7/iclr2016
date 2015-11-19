@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.5)  19 NOV 2015 13:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.15 (TeX Live 2014) (preloaded format=pdflatex 2015.5.5)  19 NOV 2015 13:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**iclr2016_nikaditya_submission.tex
-(./iclr2016_nikaditya_submission.tex
+**iclr2016_draft1.tex
+(./iclr2016_draft1.tex
 LaTeX2e <2014/05/01>
 Babel <3.9k> and hyphenation patterns for 21 languages loaded.
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/base/article.cls
@@ -1306,8 +1306,8 @@ Package graphics Info: Driver file: pdftex.def on input line 91.
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/import/import.sty
 Package: import 2009/03/23  v 5.1
 )
-(./iclr2016_nikaditya_submission.aux)
-\openout1 = `iclr2016_nikaditya_submission.aux'.
+(./iclr2016_draft1.aux)
+\openout1 = `iclr2016_draft1.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 40.
 LaTeX Font Info:    ... okay on input line 40.
@@ -1357,9 +1357,10 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 40.
 LaTeX Info: Redefining \pageref on input line 40.
 LaTeX Info: Redefining \nameref on input line 40.
- (./iclr2016_nikaditya_submission.out) (./iclr2016_nikaditya_submission.out)
+ (./iclr2016_draft1.out) (./iclr2016_draft1.out)
 \@outlinefile=\write3
-\openout3 = `iclr2016_nikaditya_submission.out'.
+\openout3 = `iclr2016_draft1.out'.
+
 
 (/usr/local/texlive/2014basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
@@ -1401,42 +1402,40 @@ File: omsptm.fd
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 44.
 
-(./diagram.tex (./drawing.pdf_tex
-<drawing.pdf, id=28, page=1, 355.65945pt x 199.1693pt>
+(./abstract.tex) (./introduction.tex) (./methodology.tex (./gainswitch.tex
+[1{/usr/local/texlive/2014basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
+
+]) (./taylor_series.tex) (./second_derivative_approach.tex (./diagram.tex
+(./drawing.pdf_tex <drawing.pdf, id=66, page=1, 355.65945pt x 199.1693pt>
 File: drawing.pdf Graphic file (type pdf)
 
 <use drawing.pdf, page 1>
 Package pdftex.def Info: drawing.pdf, page1 used on input line 52.
 (pdftex.def)             Requested size: 357.73405pt x 200.32971pt.
 
-<drawing.pdf, id=29, page=2, 355.65945pt x 199.1693pt>
+<drawing.pdf, id=67, page=2, 355.65945pt x 199.1693pt>
 File: drawing.pdf Graphic file (type pdf)
 
 <use drawing.pdf, page 2>
 Package pdftex.def Info: drawing.pdf, page2 used on input line 58.
 (pdftex.def)             Requested size: 357.73405pt x 200.32971pt.
 
-<drawing.pdf, id=30, page=3, 355.65945pt x 199.1693pt>
+<drawing.pdf, id=68, page=3, 355.65945pt x 199.1693pt>
 File: drawing.pdf Graphic file (type pdf)
 
 <use drawing.pdf, page 3>
 Package pdftex.def Info: drawing.pdf, page3 used on input line 61.
 (pdftex.def)             Requested size: 357.73405pt x 200.32971pt.
 
-<drawing.pdf, id=31, page=4, 355.65945pt x 199.1693pt>
+<drawing.pdf, id=69, page=4, 355.65945pt x 199.1693pt>
 File: drawing.pdf Graphic file (type pdf)
 
 <use drawing.pdf, page 4>
 Package pdftex.def Info: drawing.pdf, page4 used on input line 64.
 (pdftex.def)             Requested size: 357.73405pt x 200.32971pt.
-)) (./abstract.tex) (./second_derivative_gradients.tex [1{/usr/local/texlive/20
-14basic/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
-
- <./drawing.pdf> <./drawing.pdf
-
-pdfTeX warning: /usr/texbin/pdflatex (file ./drawing.pdf): PDF inclusion: multi
-ple pdfs with page group included in a single page
-> <./drawing.pdf
+)) [2])) (./experimental_results.tex)
+(./conclusions.tex) (./first_second_derivatives.tex [3 <./drawing.pdf> <./drawi
+ng.pdf
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./drawing.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
@@ -1444,48 +1443,48 @@ ple pdfs with page group included in a single page
 
 pdfTeX warning: /usr/texbin/pdflatex (file ./drawing.pdf): PDF inclusion: multi
 ple pdfs with page group included in a single page
->]) (./first_second_derivatives.tex
-Underfull \hbox (badness 10000) in paragraph at lines 2--3
+> <./drawing.pdf
+
+pdfTeX warning: /usr/texbin/pdflatex (file ./drawing.pdf): PDF inclusion: multi
+ple pdfs with page group included in a single page
+>]
+Underfull \hbox (badness 10000) in paragraph at lines 3--4
 
  []
 
-[2]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [3]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [4]
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [5]
+[4] [5]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [6]
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [7]
 Underfull \vbox (badness 2126) has occurred while \output is active []
 
- [7])
-(./taylor_series.tex [8])
-No file iclr2016_nikaditya_submission.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 71.
+ [8])
+No file iclr2016_draft1.bbl.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 79.
 [9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 71.
- (./iclr2016_nikaditya_submission.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 71.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 71.
-Package rerunfilecheck Info: File `iclr2016_nikaditya_submission.out' has not c
-hanged.
-(rerunfilecheck)             Checksum: F837D65C689F3DB426BB3CAD419C074D;486.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 71.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 79.
+ (./iclr2016_draft1.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 79.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 79.
+Package rerunfilecheck Info: File `iclr2016_draft1.out' has not changed.
+(rerunfilecheck)             Checksum: F2BBB3DCEB7301955C95020EA9618CA0;884.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 79.
  ) 
 Here is how much of TeX's memory you used:
- 12901 strings out of 494522
- 219628 string characters out of 6167206
- 304460 words of memory out of 5000000
- 15942 multiletter control sequences out of 15000+600000
+ 12932 strings out of 494522
+ 219883 string characters out of 6167206
+ 311428 words of memory out of 5000000
+ 15949 multiletter control sequences out of 15000+600000
  19938 words of font info for 37 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 40i,18n,45p,10425b,373s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 40i,18n,45p,10411b,342s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2014basic/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/lo
 cal/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
 r/local/texlive/2014basic/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex7.
@@ -1502,10 +1501,10 @@ ublic/amsfonts/cm/cmsy7.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type
 rw/times/utmb8a.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/ti
 mes/utmr8a.pfb></usr/local/texlive/2014basic/texmf-dist/fonts/type1/urw/times/u
 tmri8a.pfb>
-Output written on iclr2016_nikaditya_submission.pdf (9 pages, 166986 bytes).
+Output written on iclr2016_draft1.pdf (9 pages, 171464 bytes).
 PDF statistics:
- 275 PDF objects out of 1000 (max. 8388607)
- 227 compressed objects within 3 object streams
- 96 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 308 PDF objects out of 1000 (max. 8388607)
+ 260 compressed objects within 3 object streams
+ 105 named destinations out of 1000 (max. 500000)
+ 117 words of extra memory for PDF output out of 10000 (max. 10000000)
 
