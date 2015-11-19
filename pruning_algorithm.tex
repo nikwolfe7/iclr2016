@@ -1,1 +1,20 @@
-\subsection{Pruning Algorithm}
+\subsection{Pruning Algorithm: The Gain-switch}
+We propose the Gain-switch algorithm for pruning an optimally trained neural network here. We define gain as the quadratic error approximation $\Delta E_{k}^2$ we got from the Taylor Series.
+
+The first step is to  decide a stopping criterion. This can vary depending on the application but some intuitive stopping criteria can be the maximum number of neurons to remove, percentage scaling needed, maximum allowable accuracy drop etc. The Gain-switch algorithm performs the pruning in a greedy manner. It performs a forward propagation followed by a second-order back-propagation and collects the linear and quadratic gradients. It is to be noted that there is no weight update taking place during the back-propagation step as the network is already trained.This step is only used to collect the gradients. The algorithm then ranks all the neurons in the network based on their respective gain values and removes the neuron with the least value of the gain. 
+
+\begin{algorithm}[H]
+ \KwData{optimally trained network, training set}
+ \KwResult{A pruned network after applying the Gain-switch algorithm}
+ initialize and define stopping criterion \;
+ \While{stopping criterion is not met}{
+ $gain$ = $\Delta E_{k}^2$ \;
+  perform forward propagation over the training set \;
+  perform second-order back-propagation without updating weights and collect linear and quadratic gradients \;
+  rank the remaining neurons based on $gain$ \;
+  remove the neuron with the least value of $gain$ \;
+ }
+ \caption{The proposed Gain-switch pruning algorithm}
+\end{algorithm}
+
+The advantage of taking a greedy approach is that while removing the neurons, we are take into account the dependencies the neurons might have with one another. 

@@ -1,1 +1,6 @@
 \section{Experiments}
+We propose several experiments to compare our discussed algorithm for determining which neurons to switch off with the empirically determined best ordering. First, we do brute force ordering. Using the training data, we get the sum of squared errors for the unaltered network. Then, we switch off one neuron at a time, and do one forward pass through the training data to get the change in the output error. We use this value to rank the neurons. This is the ground truth. 
+\subsection{Correlation of Ranking vs. Ground Truth}
+\subsection{Change in Ground Truth Error vs. Expected Improvement}
+\subsection{Sequential Turn-Off}
+\subsection{Iterative Re-Estimation of Next Best Neuron}
