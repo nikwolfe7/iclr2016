@@ -1,0 +1,50 @@
+\section{2nd Derivative BackProp Weight Update Rule}
+Weight error (1st order approx):
+\begin{align}
+E\left(w\right) &= E\left(w_0\right) + \pdv{E}{w}\left(w - w_0\right)
+\end{align}
+We want:
+\begin{align}
+E\left(w\right) &= 0
+\end{align}
+\begin{align}
+0 &= E\left(w_0\right) + \pdv{E}{w}\left(w - w_0\right)
+\\
+0 &= E\left(w_0\right) + \pdv{E}{w}w - \pdv{E}{w}w_0
+\\
+\pdv{E}{w}w  &= \pdv{E}{w}w_0 - E\left(w_0\right)
+\\
+w  &= w_0 - \frac{E\left(w_0\right)}{\pdv{E}{w}} 
+\end{align}
+Weight error (2nd order approx):
+\begin{align}
+E\left(w\right) &= E\left(w_0\right) + \pdv{E}{w}\left(w - w_0\right) + \frac{1}{2}\pdv[2]{E}{w}\left(w - w_0\right)^2
+\end{align}
+We want:
+\begin{align}
+E\left(w\right) &= 0
+\end{align}
+\begin{align}
+0 &= 
+\underbrace{E\left(w_0\right)}
+_{c}
++ 
+\underbrace{\pdv{E}{w}}
+_{b} 
+\left(w - w_0\right)
++ 
+\underbrace{\frac{1}{2}\pdv[2]{E}{w}}
+_{a}
+\left(w - w_0\right)^2
+\\
+0 &= ax^2 + bx + c \\
+x &= \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+\\
+\left(w - w_0\right) &= \frac{-\left(\pdv{E}{w}\right) \pm \sqrt{\left(\pdv{E}{w}\right)^2 - 4\left(\frac{1}{2}\pdv[2]{E}{w}\right)E\left(w_0\right)}}{2\left(\frac{1}{2}\pdv[2]{E}{w}\right)}
+\\
+w &= w_0 + \frac{-\left(\pdv{E}{w}\right) \pm \sqrt{\left(\pdv{E}{w}\right)^2 - 2\left(\pdv[2]{E}{w}\right)E\left(w_0\right)}}{\left(\pdv[2]{E}{w}\right)}
+\end{align}
+We only need one of the zeros so...
+\begin{align}
+w &= w_0 + \frac{\sqrt{\left(\pdv{E}{w}\right)^2 - 2\left(\pdv[2]{E}{w}\right)E\left(w_0\right)} + \left(\pdv{E}{w}\right)}{\left(\pdv[2]{E}{w}\right)}
+\end{align}
