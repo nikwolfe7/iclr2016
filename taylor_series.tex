@@ -7,7 +7,7 @@ where $E_n$ is the error from the network over one validation instance. $E_n$ ca
 
 \begin{align}
 \hat E_n(O) \approx E_n(O_k) + (O-O_k)\cdot E_n(O_k) + \left.\pdv{E_n}{O}\right|_{O_k} +  0.5\cdot (O-O_k)^2\cdot \left.\pdv[2]{E_n}{O}\right|_{O_k}\label{eq:ts1},
-\end{align}
+\end{align}\marginpar{CHECK THIS SHIT!}
 
 where $\hat E_n(O_k)$ represents the contribution of a neuron $k$ to the total error $E_n$ of the network for any given validation instance $n$. When this neuron is pruned, its output $O_k$ becomes 0. From equation \ref{eq:ts1}, the contribution $E_n(0)$ of this neuron, then becomes:
 
