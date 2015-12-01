@@ -1,4 +1,4 @@
-\begin{thebibliography}{1}
+\begin{thebibliography}{2}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -10,5 +10,11 @@ Reed, Russell.
 \newblock Pruning algorithms-a survey.
 \newblock \emph{Neural Networks, IEEE Transactions on}, 4\penalty0
   (5):\penalty0 740--747, 1993.
+
+\bibitem[Sietsma \& Dow(1988)Sietsma and Dow]{sietsma1988neural}
+Sietsma, Jocelyn and Dow, Robert~JF.
+\newblock Neural net pruning-why and how.
+\newblock In \emph{Neural Networks, 1988., IEEE International Conference on},
+  pp.\  325--333. IEEE, 1988.
 
 \end{thebibliography}
