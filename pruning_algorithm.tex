@@ -8,9 +8,9 @@ The first step is to  decide a stopping criterion. This can vary depending on th
  \KwResult{A pruned network after applying the Gain-switch algorithm}
  initialize and define stopping criterion \;
  \While{stopping criterion is not met}{
- $gain$ = $\Delta E_{k}^2$ \;
   perform forward propagation over the training set \;
   perform second-order back-propagation without updating weights and collect linear and quadratic gradients \;
+  $gain$ = $\Delta E_{k}^2$ \;
   rank the remaining neurons based on $gain$ \;
   remove the neuron with the least value of $gain$ \;
  }
