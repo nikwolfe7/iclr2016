@@ -1,9 +1,19 @@
-\begin{thebibliography}{2}
+\begin{thebibliography}{4}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Baum \& Haussler(1989)Baum and Haussler]{baum1989size}
+Baum, Eric~B and Haussler, David.
+\newblock What size net gives valid generalization?
+\newblock \emph{Neural computation}, 1\penalty0 (1):\penalty0 151--160, 1989.
+
+\bibitem[Chauvin(1990)]{chauvin1990generalization}
+Chauvin, Yves.
+\newblock Generalization performance of overtrained back-propagation networks.
+\newblock In \emph{Neural Networks}, pp.\  45--55. Springer, 1990.
 
 \bibitem[Reed(1993)]{reed1993pruning}
 Reed, Russell.
