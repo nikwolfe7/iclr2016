@@ -4,45 +4,46 @@ The top-level auxiliary file: iclr2016_draft1.aux
 The style file: iclr2016_conference.bst
 Database file #1: iclr2016_bib.bib
 Warning--I didn't find a database entry for "•"
-You've used 4 entries,
+Warning--empty journal in fahlman1989cascade
+You've used 10 entries,
             2773 wiz_defined-function locations,
-            622 strings with 5391 characters,
-and the built_in function-call counts, 1950 in all, are:
-= -- 193
-> -- 62
-< -- 6
-+ -- 22
-- -- 18
-* -- 132
-:= -- 280
-add.period$ -- 14
-call.type$ -- 4
-change.case$ -- 18
-chr.to.int$ -- 4
-cite$ -- 8
-duplicate$ -- 103
-empty$ -- 184
-format.name$ -- 26
-if$ -- 431
+            652 strings with 6391 characters,
+and the built_in function-call counts, 4932 in all, are:
+= -- 443
+> -- 269
+< -- 11
++ -- 91
+- -- 81
+* -- 374
+:= -- 736
+add.period$ -- 32
+call.type$ -- 10
+change.case$ -- 56
+chr.to.int$ -- 10
+cite$ -- 21
+duplicate$ -- 239
+empty$ -- 414
+format.name$ -- 101
+if$ -- 1056
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 4
-newline$ -- 28
-num.names$ -- 16
-pop$ -- 38
+missing$ -- 11
+newline$ -- 58
+num.names$ -- 40
+pop$ -- 122
 preamble$ -- 1
-purify$ -- 14
+purify$ -- 47
 quote$ -- 0
-skip$ -- 78
+skip$ -- 190
 stack$ -- 0
-substring$ -- 114
-swap$ -- 21
-text.length$ -- 2
+substring$ -- 189
+swap$ -- 38
+text.length$ -- 4
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 44
-warning$ -- 0
-while$ -- 22
+type$ -- 105
+warning$ -- 1
+while$ -- 45
 width$ -- 0
-write$ -- 61
-(There was 1 warning)
+write$ -- 135
+(There were 2 warnings)

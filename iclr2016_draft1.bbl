@@ -1,4 +1,4 @@
-\begin{thebibliography}{4}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -15,6 +15,38 @@ Chauvin, Yves.
 \newblock Generalization performance of overtrained back-propagation networks.
 \newblock In \emph{Neural Networks}, pp.\  45--55. Springer, 1990.
 
+\bibitem[Fahlman \& Lebiere(1989)Fahlman and Lebiere]{fahlman1989cascade}
+Fahlman, Scott~E and Lebiere, Christian.
+\newblock The cascade-correlation learning architecture.
+\newblock 1989.
+
+\bibitem[Goodfellow et~al.(2013)Goodfellow, Warde-Farley, Mirza, Courville, and
+  Bengio]{goodfellow2013maxout}
+Goodfellow, Ian~J, Warde-Farley, David, Mirza, Mehdi, Courville, Aaron, and
+  Bengio, Yoshua.
+\newblock Maxout networks.
+\newblock \emph{arXiv preprint arXiv:1302.4389}, 2013.
+
+\bibitem[Hassibi \& Stork(1993)Hassibi and Stork]{hassibi1993second}
+Hassibi, Babak and Stork, David~G.
+\newblock \emph{Second order derivatives for network pruning: Optimal brain
+  surgeon}.
+\newblock Morgan Kaufmann, 1993.
+
+\bibitem[LeCun et~al.(1989)LeCun, Denker, Solla, Howard, and
+  Jackel]{lecun1989optimal}
+LeCun, Yann, Denker, John~S, Solla, Sara~A, Howard, Richard~E, and Jackel,
+  Lawrence~D.
+\newblock Optimal brain damage.
+\newblock In \emph{NIPs}, volume~89, 1989.
+
+\bibitem[Mozer \& Smolensky(1989)Mozer and Smolensky]{mozer1989skeletonization}
+Mozer, Michael~C and Smolensky, Paul.
+\newblock Skeletonization: A technique for trimming the fat from a network via
+  relevance assessment.
+\newblock In \emph{Advances in neural information processing systems}, pp.\
+  107--115, 1989.
+
 \bibitem[Reed(1993)]{reed1993pruning}
 Reed, Russell.
 \newblock Pruning algorithms-a survey.
@@ -26,5 +58,13 @@ Sietsma, Jocelyn and Dow, Robert~JF.
 \newblock Neural net pruning-why and how.
 \newblock In \emph{Neural Networks, 1988., IEEE International Conference on},
   pp.\  325--333. IEEE, 1988.
+
+\bibitem[Srivastava et~al.(2014)Srivastava, Hinton, Krizhevsky, Sutskever, and
+  Salakhutdinov]{srivastava2014dropout}
+Srivastava, Nitish, Hinton, Geoffrey, Krizhevsky, Alex, Sutskever, Ilya, and
+  Salakhutdinov, Ruslan.
+\newblock Dropout: A simple way to prevent neural networks from overfitting.
+\newblock \emph{The Journal of Machine Learning Research}, 15\penalty0
+  (1):\penalty0 1929--1958, 2014.
 
 \end{thebibliography}
