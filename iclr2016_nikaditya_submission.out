@@ -1,6 +1,8 @@
-\BOOKMARK [1][-]{section.1}{Second Derivative Gradient Terms}{}% 1
-\BOOKMARK [1][-]{section.2}{Second Derivative Back-Propagation}{}% 2
-\BOOKMARK [2][-]{subsection.2.1}{First and Second Derivatives}{section.2}% 3
-\BOOKMARK [3][-]{subsubsection.2.1.1}{Summary Of Output Layer Derivatives}{subsection.2.1}% 4
-\BOOKMARK [3][-]{subsubsection.2.1.2}{Hidden Layer Derivatives}{subsection.2.1}% 5
-\BOOKMARK [3][-]{subsubsection.2.1.3}{Taylor Series Representation of Error}{subsection.2.1}% 6
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Second Derivative Gradient Terms}{}% 2
+\BOOKMARK [1][-]{section.3}{Appendix A: Second Derivative Back-Propagation}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{First and Second Derivatives}{section.3}% 4
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Summary Of Output Layer Derivatives}{subsection.3.1}% 5
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Hidden Layer Derivatives}{subsection.3.1}% 6
+\BOOKMARK [3][-]{subsubsection.3.1.3}{Summary Of Hidden Layer Derivatives}{subsection.3.1}% 7
+\BOOKMARK [3][-]{subsubsection.3.1.4}{Taylor Series Representation of Error}{subsection.3.1}% 8

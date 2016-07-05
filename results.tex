@@ -11,16 +11,18 @@ Table \ref{tab:results} provides an overall summary of the experiments carried o
 In conclusion, it can be said that using the second-order Taylor Series expansion of the error function to rank individual neurons is an encouragingly accurate method of pruning networks to save memory. However it is definitely not the most accurate representation of the ranking based on the actual contribution of neurons to the error function. Another key take-away is that there are dependencies between individual neurons which might not be apparent from the outside. The better success of the Iterative Re-Ranking algorithm validates this. Perhaps a different approach like using Legendre Polynomials instead of the Taylor Series expansion would result in a better approximation of the neuron contributions.
 
 
+\section{Cosine Function}
+
 \begin{figure}
-  \includegraphics[width=\linewidth]{datasets.png}
-  \caption{The experiments were carried out on the following patters: Cosine wave, Diamond, Random Shape, Distributed Random Shape.}
-  \label{fig:datasets}
+  \includegraphics[width=\linewidth]{cosine-small.png}
+  \caption{(Starting training accuracy: 0.9999993) Performance degradation using a small network with two layers of ten neurons each. Vertical axes represent the sum of squared errors on the training set, and horizontal axes represent the number of neurons removed. The left graph represents the single-pass overall ranking procedure (Algorithm 1) and the right represents continual re-estimation procedure (Algorithm 2).}
+  \label{fig:cosine-small}
 \end{figure}
 
 \begin{figure}
-  \includegraphics[width=\linewidth]{cosine.png}
-  \caption{Performance on a cosine wave dataset for both variations of the proposed algorithm. The blue curve shows the ground truth estimated from brute force pruning, the green and the red curves show pruning based on the approximation from first and second-order expansion of the Taylor Series.}
-  \label{fig:cosine}
+  \includegraphics[width=\linewidth]{cos-small-bf.png}
+  \caption{(Starting training accuracy: 0.9999993) Performance degradation using a small network with two layers of ten neurons each. Vertical axes represent the sum of squared errors on the training set, and horizontal axes represent the number of neurons removed. The left graph represents the single-pass overall ranking procedure (Algorithm 1) and the right represents continual re-estimation procedure (Algorithm 2).}
+  \label{fig:cosine-small}
 \end{figure}
 
 \begin{figure}

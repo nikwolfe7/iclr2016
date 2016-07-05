@@ -1,15 +1,9 @@
-\begin{thebibliography}{15}
+\begin{thebibliography}{10}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
-
-\bibitem[Balzer et~al.(1991)Balzer, Takahashi, Ohta, and
-  Kyuma]{balzer1991weight}
-Balzer, Wolfgang, Takahashi, Masanobu, Ohta, Jun, and Kyuma, Kazuo.
-\newblock Weight quantization in boltzmann machines.
-\newblock \emph{Neural Networks}, 4\penalty0 (3):\penalty0 405--409, 1991.
 
 \bibitem[Baum \& Haussler(1989)Baum and Haussler]{baum1989size}
 Baum, Eric~B and Haussler, David.
@@ -20,12 +14,6 @@ Baum, Eric~B and Haussler, David.
 Chauvin, Yves.
 \newblock Generalization performance of overtrained back-propagation networks.
 \newblock In \emph{Neural Networks}, pp.\  45--55. Springer, 1990.
-
-\bibitem[Dundar \& Rose(1994)Dundar and Rose]{dundar1994effects}
-Dundar, Gunhan and Rose, Kenneth.
-\newblock The effects of quantization on multilayer neural networks.
-\newblock \emph{IEEE transactions on neural networks/a publication of the IEEE
-  Neural Networks Council}, 6\penalty0 (6):\penalty0 1446--1451, 1994.
 
 \bibitem[Fahlman \& Lebiere(1989)Fahlman and Lebiere]{fahlman1989cascade}
 Fahlman, Scott~E and Lebiere, Christian.
@@ -45,13 +33,6 @@ Hassibi, Babak and Stork, David~G.
   surgeon}.
 \newblock Morgan Kaufmann, 1993.
 
-\bibitem[Hoehfeld \& Fahlman(1992)Hoehfeld and Fahlman]{hoehfeld1992learning}
-Hoehfeld, Markus and Fahlman, Scott~E.
-\newblock Learning with limited numerical precision using the
-  cascade-correlation algorithm.
-\newblock \emph{IEEE Transactions on Neural Networks}, 3\penalty0 (4):\penalty0
-  602--611, 1992.
-
 \bibitem[LeCun et~al.(1989)LeCun, Denker, Solla, Howard, and
   Jackel]{lecun1989optimal}
 LeCun, Yann, Denker, John~S, Solla, Sara~A, Howard, Richard~E, and Jackel,
@@ -59,32 +40,18 @@ LeCun, Yann, Denker, John~S, Solla, Sara~A, Howard, Richard~E, and Jackel,
 \newblock Optimal brain damage.
 \newblock In \emph{NIPs}, volume~89, 1989.
 
-\bibitem[Mozer \& Smolensky(1989{\natexlab{a}})Mozer and
-  Smolensky]{mozer1989skeletonization}
+\bibitem[Mozer \& Smolensky(1989)Mozer and Smolensky]{mozer1989skeletonization}
 Mozer, Michael~C and Smolensky, Paul.
 \newblock Skeletonization: A technique for trimming the fat from a network via
   relevance assessment.
 \newblock In \emph{Advances in neural information processing systems}, pp.\
-  107--115, 1989{\natexlab{a}}.
-
-\bibitem[Mozer \& Smolensky(1989{\natexlab{b}})Mozer and
-  Smolensky]{mozer1989using}
-Mozer, Michael~C and Smolensky, Paul.
-\newblock Using relevance to reduce network size automatically.
-\newblock \emph{Connection Science}, 1\penalty0 (1):\penalty0 3--16,
-  1989{\natexlab{b}}.
+  107--115, 1989.
 
 \bibitem[Reed(1993)]{reed1993pruning}
 Reed, Russell.
 \newblock Pruning algorithms-a survey.
 \newblock \emph{Neural Networks, IEEE Transactions on}, 4\penalty0
   (5):\penalty0 740--747, 1993.
-
-\bibitem[Segee \& Carter(1991)Segee and Carter]{segee1991fault}
-Segee, Bruce~E and Carter, Michael~J.
-\newblock Fault tolerance of pruned multilayer networks.
-\newblock In \emph{Neural Networks, 1991., IJCNN-91-Seattle International Joint
-  Conference on}, volume~2, pp.\  447--452. IEEE, 1991.
 
 \bibitem[Sietsma \& Dow(1988)Sietsma and Dow]{sietsma1988neural}
 Sietsma, Jocelyn and Dow, Robert~JF.
