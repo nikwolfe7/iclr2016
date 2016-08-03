@@ -1,6 +1,6 @@
 import sys
 import os
-fname = 'mnist-deep.exp.txt'
+fname = sys.argv[1]
 f = [l.strip() for l in open(fname).readlines()]
 pattern = 'Picking the winner...'
 count = 0
@@ -38,9 +38,9 @@ gtl = gl[0:100]
 g1l = gl[100:200]
 g2l = gl[200:300]
 
-o1 = open(fname.strip('.txt') + '.neuron-rankings.txt','w')
-o2 = open(fname.strip('.txt') + '.neuron-accuracy.txt','w')
-o3 = open(fname.strip('.txt') + '.layer-ids.txt','w')
+o1 = open(fname.rstrip('.txt') + '.neuron-rankings.txt','w')
+o2 = open(fname.rstrip('.txt') + '.neuron-accuracy.txt','w')
+o3 = open(fname.rstrip('.txt') + '.layer-ids.txt','w')
 for i in range(len(gt)):
 	o1.write(','.join((str(gt[i]),str(g1[i]),str(g2[i]))) + '\n')
 	o2.write(','.join((str(gta[i]),str(g1a[i]),str(g2a[i]))) + '\n')
