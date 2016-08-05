@@ -3,46 +3,44 @@ Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: iclr2016_nikaditya_submission.aux
 The style file: iclr2016_conference.bst
 Database file #1: iclr2016_bib.bib
-Warning--empty journal in fahlman1989cascade
-You've used 10 entries,
+You've used 4 entries,
             2773 wiz_defined-function locations,
-            651 strings with 6416 characters,
-and the built_in function-call counts, 4932 in all, are:
-= -- 443
-> -- 269
-< -- 11
-+ -- 91
-- -- 81
-* -- 374
-:= -- 736
-add.period$ -- 32
-call.type$ -- 10
-change.case$ -- 56
-chr.to.int$ -- 10
-cite$ -- 21
-duplicate$ -- 239
-empty$ -- 414
-format.name$ -- 101
-if$ -- 1056
+            621 strings with 5416 characters,
+and the built_in function-call counts, 1950 in all, are:
+= -- 193
+> -- 62
+< -- 6
++ -- 22
+- -- 18
+* -- 132
+:= -- 280
+add.period$ -- 14
+call.type$ -- 4
+change.case$ -- 18
+chr.to.int$ -- 4
+cite$ -- 8
+duplicate$ -- 103
+empty$ -- 184
+format.name$ -- 26
+if$ -- 431
 int.to.chr$ -- 1
 int.to.str$ -- 1
-missing$ -- 11
-newline$ -- 58
-num.names$ -- 40
-pop$ -- 122
+missing$ -- 4
+newline$ -- 28
+num.names$ -- 16
+pop$ -- 38
 preamble$ -- 1
-purify$ -- 47
+purify$ -- 14
 quote$ -- 0
-skip$ -- 190
+skip$ -- 78
 stack$ -- 0
-substring$ -- 189
-swap$ -- 38
-text.length$ -- 4
+substring$ -- 114
+swap$ -- 21
+text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 105
-warning$ -- 1
-while$ -- 45
+type$ -- 44
+warning$ -- 0
+while$ -- 22
 width$ -- 0
-write$ -- 135
-(There was 1 warning)
+write$ -- 61
